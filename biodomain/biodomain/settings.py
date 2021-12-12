@@ -132,11 +132,11 @@ STATICFILES_DIRS= [os.path.join(BASE_DIR,'static'),]
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# Email 
+# Email Settings
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 DEFAULT_FROM_EMAIL = 'contactbioequipzone@gmail.com'
 EMAIL_HOST = 'smtp.gmail.com' 
 EMAIL_HOST_USER = 'contactbioequipzone@gmail.com' 
-EMAIL_HOST_PASSWORD = '<contactbioequipzone_password>' 
+EMAIL_HOST_PASSWORD = '<password>' 
 EMAIL_PORT = 587 
 EMAIL_USE_TLS = True 
