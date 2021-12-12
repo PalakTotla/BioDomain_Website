@@ -31,7 +31,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
 
 
-
+    
 </head>
 
 <body>
@@ -51,7 +51,7 @@
             <li><a href="team" target="_blank">Meet Our Team</a></li>
             <!-- <li><a href="https://twitter.com/plavookac" target="_blank">Twitter</a></li>
             <li><a href="https://www.youtube.com/channel/UCDfZM0IK6RBgud8HYGFXAJg" target="_blank">YouTube</a></li> -->
-
+            
         </ul>
     </div>
 
@@ -70,44 +70,384 @@
                 </ul>
             </div>
         </div>
-    </nav>
+    </nav>    
 
     <div class="bg"></div>
     <div class="bg bg2"></div>
     <div class="bg bg3"></div>
-
+        
     <div class="container text-center" style="height: 60vh; margin-top: 15%">
         <h1 class="animate__animated animate__slideInUp ">BioEquipZon</h1>
         <h4 class="animate__animated animate__fadeIn animate__delay-1s">Access the equipments in your zone</h4>
 
-        <a href="/instruments"><button class="button "><span>List of Equipments<br></span></button></a>
+        <a href="/instrumentlistpage"><button class="button "><span>List of Equipments<br></span></button></a>
     </div>
-    <div class="container text-center" style="height: 10vh; margin-top: 1%">
 
-        <button class="button " data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"><span>About<br></span></button>
-
-        <div class="collapse" id="collapseExample">
-            <div class="card card-body">
-                This website is a platform for the researchers to find the equipments in different institutes.
-            </div>
-
+    <div class= "about">
+        <div class="mouse"></div>
+        <div id="app">
+            <section>
+                <div class="text">
+                    <h2>
+                        special <br />
+                        carousel
+                    </h2>
+                    <p>
+                        This is a special carousel, reference「Wild Souls - Our
+                        Wild Way」part.
+                    </p>
+                    <a href="https://www.wildsouls.gr/en/" target="_blank">
+                        <span>VIEW MORE!</span>
+                    </a>
+                </div>
+                <div class="carousel">
+                    <div class="card c1">
+                        <img src="https://picsum.photos/500/550?random=113" alt="" />
+                    </div>
+                    <div class="card c2">
+                        <img src="https://picsum.photos/500/550?random=114" alt="" />
+                    </div>
+                    <div class="card c3">
+                        <img src="https://picsum.photos/500/550?random=115" alt="" />
+                    </div>
+                </div>
+            </section>
         </div>
     </div>
+
     <style>
-        .card {
-            font-size: 20px;
-            background-color: #0b4d07;
-            color: white;
-            border: none;
-            border-radius: 10px;
-            padding: 20px;
+        @import url("https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+        @-webkit-keyframes buttonHover {
+        100% {
+            transform: translateX(145%);
+        }
+        }
+        @keyframes buttonHover {
+        100% {
+            transform: translateX(145%);
+        }
+        }
+        @-webkit-keyframes moveCard {
+        95% {
+            left: 0;
+        }
+        100% {
+            left: 100%;
+        }
+        }
+        @keyframes moveCard {
+        95% {
+            left: 0;
+        }
+        100% {
+            left: 100%;
+        }
+        }
+        *,
+        *::before,
+        *::after {
+        box-sizing: border-box;
+        color: inherit;
+        list-style: none;
+        }
+
+        .about {
+            background-color: #fff;
         }
         
-        .form-control {
-            font-size: 20px;
-            padding: 20px;
+        a {
+        text-decoration: none;
         }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p {
+        margin: 0;
+        line-height: 1.5;
+        }
+
         
+
+        #app {
+        width: 100%;
+        max-width: 1920px;
+        min-width: 320px;
+        margin: 0 auto;
+        overflow: hidden;
+        }
+
+        .mouse {
+        width: 60px;
+        height: 60px;
+        background-color: #000;
+        border-radius: 50%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(-50%, -50%) scale(0.5);
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 0.5s, transform 0.5s;
+        z-index: 99;
+        }
+        .mouse::before {
+        content: ">";
+        display: block;
+        color: #fff;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 2rem;
+        font-weight: 700;
+        }
+        .mouse.hover {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+        }
+
+        section {
+        display: flex;
+        width: 80%;
+        padding: 100px 0;
+        margin: 0 auto;
+        }
+        @media (max-width: 768px) {
+        section {
+            flex-wrap: wrap;
+            width: 84%;
+        }
+        }
+        section .text {
+        flex-basis: 50%;
+        margin-right: 12%;
+        position: relative;
+        z-index: 2;
+        }
+        @media (max-width: 768px) {
+        section .text {
+            flex-basis: 100%;
+            margin-right: 0;
+            margin-bottom: 16%;
+        }
+        }
+        section .text h2 {
+        font-size: 6rem;
+        font-weight: 700;
+        letter-spacing: 2px;
+        line-height: 1;
+        margin-bottom: 20px;
+        }
+        @media (max-width: 940px) {
+        section .text h2 {
+            font-size: 5rem;
+        }
+        }
+        section .text p {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+        }
+        @media (max-width: 940px) {
+        section .text p {
+            font-size: 1.6rem;
+        }
+        }
+        section .text a {
+        display: inline-block;
+        background-color: #000;
+        padding: 16px 40px;
+        border-radius: 40px;
+        overflow: hidden;
+        }
+        section .text a span {
+        display: block;
+        color: #fff;
+        font-size: 1.4rem;
+        font-weight: 700;
+        letter-spacing: 2px;
+        position: relative;
+        width: 100%;
+        transform: translateX(0);
+        -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+                user-select: none;
+        }
+        @media (max-width: 940px) {
+        section .text a span {
+            font-size: 1.3rem;
+        }
+        }
+        section .text a span::before {
+        content: "VIEW MORE!";
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transform: translateX(-145%);
+        }
+        section .text a:hover span {
+        -webkit-animation: buttonHover linear 2s infinite;
+                animation: buttonHover linear 2s infinite;
+        }
+        section .carousel {
+        flex-basis: 50%;
+        height: 500px;
+        position: relative;
+        }
+        @media (max-width: 768px) {
+        section .carousel {
+            flex-basis: 100%;
+            height: 400px;
+        }
+        }
+        section .carousel .card {
+        width: 100%;
+        max-width: 450px;
+        position: absolute;
+        top: 0;
+        left: 200%;
+        opacity: 0;
+        -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+                user-select: none;
+        transform-origin: bottom center;
+        transition: left 0.5s, opacity 0.5s, transform 0.5s;
+        }
+        @media (max-width: 768px) {
+        section .carousel .card {
+            max-width: 350px;
+        }
+        }
+        section .carousel .card.c1 {
+        transform: translateX(-50%) rotate(15deg);
+        }
+        section .carousel .card.c2 {
+        transform: translateX(-50%) rotate(-15deg);
+        transition-delay: 0.2s;
+        }
+        section .carousel .card.c3 {
+        transform: translateX(-50%) rotate(0deg);
+        transition-delay: 0.4s;
+        }
+        section .carousel .card.active {
+        left: 50%;
+        opacity: 1;
+        }
+        section .carousel .card.move {
+        left: 0;
+        opacity: 0;
+        transition-delay: 0s;
+        }
+        section .carousel .card.stage {
+        transform: translateX(-50%) rotate(0deg);
+        transition-delay: 0s;
+        }
+    </style>
+
+    <script>
+        'use strict'
+        ;(function () {
+            let isMobile =
+                navigator.userAgent.match(
+                    /Line|J2ME|Opera Mini|SonyEricsson|Nokia|iPhone|iPod|BB10|PlayBook|android|webOS|BlackBerry|Windows Phone|Windows CE|Android/i
+                ) != null
+            let scrollTop =
+                window.pageYOffset ||
+                document.documentElement.scrollTop ||
+                document.body.scrollTop
+            let carousel = document.querySelector('.carousel')
+            let cards = document.querySelectorAll('.card')
+            let c1 = document.querySelector('.c1')
+            let c2 = document.querySelector('.c2')
+            let c3 = document.querySelector('.c3')
+            let mouse = document.querySelector('.mouse')
+            let status = 0
+            let moving = false
+
+            function clickCard() {
+                if (!moving) {
+                    moving = true
+                    status++
+                    changeCard(status)
+                }
+            }
+            function changeCard(status) {
+                if (status % 3 === 0) {
+                    cards.forEach((card) => {
+                        card.classList.remove('move')
+                        card.classList.remove('stage')
+                        card.classList.add('active')
+                    })
+                    hideCard()
+                }
+                if (status % 3 === 1) {
+                    c3.classList.add('move')
+                    c2.classList.add('stage')
+                    hideCard(c3)
+                }
+                if (status % 3 === 2) {
+                    c2.classList.add('move')
+                    c1.classList.add('stage')
+                    hideCard(c2)
+                }
+            }
+            function hideCard(el) {
+                if (el) {
+                    setTimeout(() => {
+                        el.classList.remove('active')
+                        el.classList.remove('move')
+                        el.classList.remove('stage')
+                    }, 500)
+                }
+                setTimeout(() => {
+                    moving = false
+                }, 700)
+            }
+            function cardEnter() {
+                mouse.classList.add('hover')
+            }
+            function cardLeave() {
+                mouse.classList.remove('hover')
+            }
+            function init() {
+                if (isMobile) mouse.style.display = 'none'
+                window.addEventListener('scroll', function () {
+                    scrollTop =
+                        window.pageYOffset ||
+                        document.documentElement.scrollTop ||
+                        document.body.scrollTop
+                })
+                window.addEventListener('mousemove', function (e) {
+                    mouse.style.top = e.y + scrollTop + 'px'
+                    mouse.style.left = e.x + 'px'
+                })
+                carousel.addEventListener('click', clickCard)
+                carousel.addEventListener('mouseenter', cardEnter)
+                carousel.addEventListener('mouseleave', cardLeave)
+                setTimeout(() => {
+                    cards.forEach((card) => card.classList.add('active'))
+                }, 500)
+            }
+            init()
+        })()
+
+    </script>
+
+
+
+
+
+
+
+    <style>
         .list_button_div {
             z-index: 50;
             justify-content: center;
@@ -131,8 +471,8 @@
         .navbar-inverse .navbar-nav>li>a:hover {
             background-color: #a2e63c;
             color: black;
-        }
-        
+        }        
+               
         .button {
             border-radius: 20px;
             background-color: #004f34;
@@ -182,8 +522,8 @@
             overflow: hidden;
             z-index: 10;
         }
-        
-        .header img {
+
+        .header img{
             height: 80%;
             padding: 0.75% 1.5% 0 0;
         }
@@ -218,7 +558,7 @@
             margin-top: 60px;
             transform: translateX(-250px);
             transition: transform 250ms ease-in-out;
-            background: linear-gradient(180deg, #004f34 0%, rgb(64, 204, 83) 100%);
+            background: linear-gradient(180deg, #004f34 0%,  rgb(64, 204, 83) 100%);
             z-index: 10;
         }
         
@@ -326,33 +666,33 @@
             box-sizing: border-box;
             transform: rotate(-135deg);
             margin-top: -9px;
-        }
+        }        
     </style>
-
+    
 
     <style>
         .bg {
-            animation: slide 3s ease-in-out infinite alternate;
-            background-image: linear-gradient(-60deg, rgb(64, 204, 83) 50%, rgb(9, 180, 123) 50%);
-            bottom: 0;
-            left: -50%;
-            opacity: .5;
-            position: fixed;
-            right: -50%;
-            top: 0;
-            z-index: -1;
+        animation:slide 3s ease-in-out infinite alternate;
+        background-image: linear-gradient(-60deg, rgb(64, 204, 83) 50%, rgb(9, 180, 123) 50%);
+        bottom:0;
+        left:-50%;
+        opacity:.5;
+        position:fixed;
+        right:-50%;
+        top:0;
+        z-index:-1;        
         }
-        
+
         .bg2 {
-            animation-direction: alternate-reverse;
-            animation-duration: 4s;
+        animation-direction:alternate-reverse;
+        animation-duration:4s;
         }
-        
+
         .bg3 {
-            animation-duration: 5s;
+        animation-duration:5s;
         }
-        
-        h1 {
+
+        h1{
             font-size: 7.5rem;
             padding-bottom: 2%;
         }
@@ -360,13 +700,14 @@
         h4 {
             padding-bottom: 15%;
         }
-        
+
+
         @keyframes slide {
             0% {
-                transform: translateX(-25%);
+                transform:translateX(-25%);
             }
             100% {
-                transform: translateX(25%);
+                transform:translateX(25%);
             }
         }
     </style>
@@ -394,6 +735,7 @@
     </div> -->
 
     <style>
+
         .about_section details {
             background-color: rgba(0, 79, 52, 0.8);
             width: 50%;
@@ -403,44 +745,45 @@
             margin: 0 auto;
             position: relative;
             font-size: 24px;
-            border: 1px solid rgba(0, 0, 0, .1);
+            border: 1px solid rgba(0,0,0,.1);
             border-radius: 20px;
             box-sizing: border-box;
             transition: all .3s;
-        }
-        
-        .about_section details+details {
+          }
+          
+          .about_section details + details {
             margin-top: 20px;
-        }
-        
-        .about_section details[open] {
+          }
+          
+          .about_section details[open] {
             min-height: 50px;
             text-align: justify-content;
             background-color: rgba(0, 79, 52, 0.8);
-            box-shadow: 2px 2px 20px rgba(0, 0, 0, .2);
-        }
-        
-        .about_section details p {
+            box-shadow: 2px 2px 20px rgba(0,0,0,.2);
+          }
+          
+          .about_section details p {
             color: white;
             padding-top: 5%;
             font-size: 2rem;
             font-weight: 300;
-        }
-        
-        .about_section summary {
+          }
+          
+          .about_section summary {
             color: white;
             display: flex;
             justify-content: space-between;
             align-items: center;
             font-weight: 500;
             cursor: pointer;
-        }
-        
-        .about_section summary:focus {
+          }
+          
+          .about_section summary:focus {
             outline: none;
-        }
-        
-        .about_section summary:focus::after {
+            
+          }
+          
+          .about_section summary:focus::after {
             content: "";
             height: 100%;
             width: 100%;
@@ -448,33 +791,34 @@
             position: absolute;
             top: 0;
             left: 0;
-        }
-        
-        .about_section summary::-webkit-details-marker {
+          }
+          
+          .about_section summary::-webkit-details-marker {
             display: none
-        }
-        
-        .control-icon {
+          }
+          
+          .control-icon {
             fill: white;
             transition: .3s ease;
             pointer-events: none;
-        }
-        
-        .control-icon-close {
+          }
+          
+          .control-icon-close {
             display: none;
-        }
-        
-        .about_section details[open] .control-icon-close {
+          }
+          
+          .about_section details[open] .control-icon-close {
             display: initial;
             transition: .3s ease;
-        }
-        
-        .about_section details[open] .control-icon-expand {
+          }
+          
+          .about_section details[open] .control-icon-expand {
             display: none;
-        }
-    </style>
+          }
+          
+    </style>   
 
-
+    
 
     <script>
         var coll = document.getElementsByClassName("collapsible");
@@ -502,213 +846,158 @@
 
 
     <div class="row">
-        <div class="content">
-            <div class="content-overlay"></div>
-            <img class="content-image" src="{% static 'images\Basic.png' %}" alt='Basic'>
-            <h3 class="name-text">Basic</h3>
+        <div class="content">  
+            <div class="content-overlay"></div>            
+            <img class="content-image" src="{% static 'images\Basic.png' %}" alt='Basic'>    
+            <h3 class="name-text">Basic</h3>                                    
             <div class="content-details fadeIn-bottom">
                 <p class="content-text">This is a short description. This is a short description. This is a short description. This is a short description. This is a short description.</p>
-                <li>
-                    <a href="BasicEquipments">
-                        <h4>View more</h4>
-                    </a>
-                </li>
-            </div>
-        </div>
+                <li><a href="BasicEquipments"><h4>View more</h4></a></li>
+            </div>            
+        </div>   
 
-        <div class="content">
+        <div class="content">         
             <div class="content-overlay"></div>
             <img class="content-image" src="{% static 'images\Bioimaging.png' %}" alt='Bioimaging'>
-            <h3 class="name-text">Bioimaging</h3>
+            <h3 class="name-text">Bioimaging</h3> 
             <div class="content-details fadeIn-bottom">
-                <p class="content-text">This is a short description. This is a short description. This is a short description. This is a short description. This is a short description.</p>
-                <li>
-                    <a href="BioimagingEquipments">
-                        <h4>View more</h4>
-                    </a>
-                </li>
-            </div>
+              <p class="content-text">This is a short description. This is a short description. This is a short description. This is a short description. This is a short description.</p>
+              <li><a href="BioimagingEquipments"><h4>View more</h4></a></li>
+            </div>          
         </div>
 
-        <div class="content">
+        <div class="content"> 
             <div class="content-overlay"></div>
             <img class="content-image" src="{% static 'images\Centrifuge.png' %}" alt='Centrifuge'>
-            <h3 class="name-text">Centrifuge</h3>
+            <h3 class="name-text">Centrifuge</h3> 
             <div class="content-details fadeIn-bottom">
-                <p class="content-text">This is a short description. This is a short description. This is a short description. This is a short description. This is a short description.</p>
-                <li>
-                    <a href="CentrifugeEquipments">
-                        <h4>View more</h4>
-                    </a>
-                </li>
+              <p class="content-text">This is a short description. This is a short description. This is a short description. This is a short description. This is a short description.</p>
+              <li><a href="CentrifugeEquipments"><h4>View more</h4></a></li>
             </div>
         </div>
     </div>
 
     <div class="row">
-        <div class="content">
+        <div class="content">                     
             <div class="content-overlay"></div>
             <img class="content-image" src="{% static 'images\CellCulture.png' %}" alt='Cell Culture'>
-            <h3 class="name-text">Cell Culture</h3>
+            <h3 class="name-text">Cell Culture</h3> 
             <div class="content-details fadeIn-bottom">
                 <p class="content-text">This is a short description. This is a short description. This is a short description. This is a short description. This is a short description.</p>
-                <li>
-                    <a href="CellCultureEquipments">
-                        <h4>View more</h4>
-                    </a>
-                </li>
-            </div>
-        </div>
+                <li><a href="CellCultureEquipments"><h4>View more</h4></a></li>
+            </div>            
+        </div>   
 
-        <div class="content">
+        <div class="content">        
             <div class="content-overlay"></div>
             <img class="content-image" src="{% static 'images\Electrophoresis.png' %}" alt='Electrophoresis' style="height: 110%;">
-            <h3 class="name-text">Electrophoresis</h3>
+            <h3 class="name-text">Electrophoresis</h3> 
             <div class="content-details fadeIn-bottom">
-                <p class="content-text">This is a short description. This is a short description. This is a short description. This is a short description. This is a short description.</p>
-                <li>
-                    <a href="ElectrophoresisEquipments">
-                        <h4>View more</h4>
-                    </a>
-                </li>
-            </div>
+              <p class="content-text">This is a short description. This is a short description. This is a short description. This is a short description. This is a short description.</p>
+              <li><a href="ElectrophoresisEquipments"><h4>View more</h4></a></li>
+            </div>          
         </div>
 
-        <div class="content">
+        <div class="content"> 
             <div class="content-overlay"></div>
             <img class="content-image" src="{% static 'images\Chromatography.png' %}" alt='Chromatography'>
-            <h3 class="name-text">Chromatography</h3>
+            <h3 class="name-text">Chromatography</h3> 
             <div class="content-details fadeIn-bottom">
-                <p class="content-text">This is a short description. This is a short description. This is a short description. This is a short description. This is a short description.</p>
-                <li>
-                    <a href="ChromatographyEquipments">
-                        <h4>View more</h4>
-                    </a>
-                </li>
+              <p class="content-text">This is a short description. This is a short description. This is a short description. This is a short description. This is a short description.</p>
+              <li><a href="ChromatographyEquipments"><h4>View more</h4></a></li>
             </div>
         </div>
     </div>
 
     <div class="row">
-        <div class="content">
+        <div class="content">                     
             <div class="content-overlay"></div>
             <img class="content-image" src="{% static 'images\Spectroscopy.png' %}" alt='Spectroscopy'>
-            <h3 class="name-text">Spectroscopy</h3>
+            <h3 class="name-text">Spectroscopy</h3> 
             <div class="content-details fadeIn-bottom">
                 <p class="content-text">This is a short description. This is a short description. This is a short description. This is a short description. This is a short description.</p>
-                <li>
-                    <a href="SpectroscopyEquipments">
-                        <h4>View more</h4>
-                    </a>
-                </li>
-            </div>
-        </div>
-
-        <div class="content">
+                <li><a href="SpectroscopyEquipments"><h4>View more</h4></a></li>
+            </div>            
+        </div> 
+        
+        <div class="content">                     
             <div class="content-overlay"></div>
             <img class="content-image" src="{% static 'images\X-rayCrystallography.png' %}" alt='X-ray Crystallography'>
-            <h3 class="name-text">X-ray Crystallography</h3>
+            <h3 class="name-text">X-ray Crystallography</h3> 
             <div class="content-details fadeIn-bottom">
                 <p class="content-text">This is a short description. This is a short description. This is a short description. This is a short description. This is a short description.</p>
-                <li>
-                    <a href="XrayCrystallographyEquipments">
-                        <h4>View more</h4>
-                    </a>
-                </li>
-            </div>
-        </div>
-
-        <div class="content">
-            <div id="owl-example" class="owl-carousel">
+                <li><a href="XrayCrystallographyEquipments"><h4>View more</h4></a></li>
+            </div>            
+        </div>  
+        
+        <div class="content"> 
+            <div id="owl-example" class="owl-carousel">                         
                 <div class="owl_text">
-                    <div class="content-overlay"></div>
+                    <div class="content-overlay"></div>  
                     <img class="content-image" src="{% static 'images\Sequencing.png' %}" alt='Sequencing'>
-                    <h3 class="name-text">Sequencing</h3>
+                    <h3 class="name-text">Sequencing</h3> 
                     <div class="content-details fadeIn-bottom">
                         <p class="content-text" style="padding: 0 10% 0 10%;">This is a short description. This is a short description. This is a short description. This is a short description. This is a short description.</p>
-                        <li>
-                            <a href="SequencingEquipments">
-                                <h4>View more</h4>
-                            </a>
-                        </li>
-                    </div>
+                        <li><a href="SequencingEquipments"><h4>View more</h4></a></li>
+                    </div>  
                 </div>
                 <div class="owl_text">
-                    <div class="content-overlay"></div>
+                    <div class="content-overlay"></div>  
                     <img class="content-image" src="{% static 'images\PCR.png' %}" alt='PCR'>
-                    <h3 class="name-text">PCR</h3>
+                    <h3 class="name-text">PCR</h3> 
                     <div class="content-details fadeIn-bottom">
                         <p class="content-text" style="padding: 0 10% 0 10%;">This is a short description. This is a short description. This is a short description. This is a short description. This is a short description.</p>
-                        <li>
-                            <a href="PCREquipments">
-                                <h4>View more</h4>
-                            </a>
-                        </li>
-                    </div>
+                        <li><a href="PCREquipments"><h4>View more</h4></a></li>
+                    </div> 
                 </div>
                 <div class="owl_text">
-                    <div class="content-overlay"></div>
-                    <img class="content-image" src="{% static 'images\Refrigerators.png' %}" alt='Refrigerators'>
-                    <h3 class="name-text">Refrigerators</h3>
+                    <div class="content-overlay"></div> 
+                    <img class="content-image" src="{% static 'images\Refrigerators.png' %}" alt='Refrigerators' >
+                    <h3 class="name-text">Refrigerators</h3> 
                     <div class="content-details fadeIn-bottom">
                         <p class="content-text" style="padding: 0 10% 0 10%;">This is a short description. This is a short description. This is a short description. This is a short description. This is a short description.</p>
-                        <li>
-                            <a href="RefrigeratorEquipments">
-                                <h4>View more</h4>
-                            </a>
-                        </li>
-                    </div>
+                        <li><a href="RefrigeratorEquipments"><h4>View more</h4></a></li>
+                    </div> 
                 </div>
                 <div class="owl_text">
-                    <div class="content-overlay"></div>
-                    <img class="content-image" src="{% static 'images\Bioreactors.png' %}" alt='Bioreactors'>
-                    <h3 class="name-text">Bioreactors</h3>
+                    <div class="content-overlay"></div> 
+                    <img class="content-image" src="{% static 'images\Bioreactors.png' %}" alt='Bioreactors' >
+                    <h3 class="name-text">Bioreactors</h3> 
                     <div class="content-details fadeIn-bottom">
                         <p class="content-text" style="padding: 0 10% 0 10%;">This is a short description. This is a short description. This is a short description. This is a short description. This is a short description.</p>
-                        <li>
-                            <a href="BioreactorEquipments">
-                                <h4>View more</h4>
-                            </a>
-                        </li>
-                    </div>
+                        <li><a href="BioreactorEquipments"><h4>View more</h4></a></li>
+                    </div> 
                 </div>
                 <div class="owl_text">
-                    <div class="content-overlay"></div>
+                    <div class="content-overlay"></div> 
                     <img class="content-image" src="{% static 'images\Incubators.png' %}" alt='Incubators'>
-                    <h3 class="name-text">Incubators</h3>
+                    <h3 class="name-text">Incubators</h3> 
                     <div class="content-details fadeIn-bottom">
                         <p class="content-text" style="padding: 0 10% 0 10%;">This is a short description. This is a short description. This is a short description. This is a short description. This is a short description.</p>
-                        <li>
-                            <a href="IncubatorEquipments">
-                                <h4>View more</h4>
-                            </a>
-                        </li>
-                    </div>
+                        <li><a href="IncubatorEquipments"><h4>View more</h4></a></li>
+                    </div> 
                 </div>
                 <div class="owl_text">
-                    <div class="content-overlay"></div>
+                    <div class="content-overlay"></div> 
                     <img class="content-image" src="{% static 'images\Miscellaneous.png' %}" alt='Miscellaneous'>
-                    <h3 class="name-text">Miscellaneous</h3>
+                    <h3 class="name-text">Miscellaneous</h3> 
                     <div class="content-details fadeIn-bottom">
                         <p class="content-text" style="padding: 0 10% 0 10%;">This is a short description. This is a short description. This is a short description. This is a short description. This is a short description.</p>
-                        <li>
-                            <a href="MiscellaneousEquipments">
-                                <h4>View more</h4>
-                            </a>
-                        </li>
-                    </div>
-                </div>
-            </div>
-        </div>
+                        <li><a href="MiscellaneousEquipments"><h4>View more</h4></a></li>
+                    </div> 
+                </div>                
+            </div>  
+        </div>          
     </div>
 
-    <style>
+    <style>        
+
         .owl-nav {
             position: absolute;
             top: calc(50%);
             width: 100%;
         }
-        
+
         .owl-nav div {
             position: absolute;
             top: 10%;
@@ -716,53 +1005,53 @@
             height: 40px;
             border-radius: 50%;
         }
-        
+
         .owl-prev {
             left: 0;
             display: flex;
-            background: white;
+            background: white;            
         }
-        
+
         .owl-prev:hover {
-            background: rgba(0, 0, 0, 0.5);
+            background: rgba(0,0,0,0.5);
             color: #fff;
         }
-        
+
         .owl-next {
             right: 0;
             display: flex;
             background: white;
         }
-        
+
         .owl-next:hover {
-            background: rgba(0, 0, 0, 0.5);
+            background: rgba(0,0,0,0.5);
             color: #fff;
         }
-        
+
         .owl-prev i,
         .owl-next i {
             margin: auto;
         }
     </style>
 
-
+    
     <script>
         $(document).ready(function() {
-            $("#owl-example").owlCarousel({
-                navigation: true, // Show next and prev buttons
-                slideSpeed: 300,
-                margin: 10,
-                paginationSpeed: 400,
-                autoplay: false,
-                items: 1,
-                itemsDesktop: false,
-                itemsDesktopSmall: false,
-                itemsTablet: false,
-                itemsMobile: false,
-                loop: true,
-                nav: true,
-                navText: ["<i class='fa fa-angle-left fa-2x' aria-hidden='true'></i>", "<i class='fa fa-angle-right fa-2x' aria-hidden='true'></i>"]
-            });
+        $("#owl-example").owlCarousel({
+        navigation: true, // Show next and prev buttons
+        slideSpeed: 300,
+        margin: 10,
+        paginationSpeed: 400,
+        autoplay: false,
+        items: 1,
+        itemsDesktop: false,
+        itemsDesktopSmall: false,
+        itemsTablet: false,
+        itemsMobile: false,
+        loop: true,
+        nav: true,
+        navText: ["<i class='fa fa-angle-left fa-2x' aria-hidden='true'></i>", "<i class='fa fa-angle-right fa-2x' aria-hidden='true'></i>"]
+        });
         });
     </script>
 
@@ -770,119 +1059,121 @@
 
     <style>
         @import url(https://fonts.googleapis.com/css?family=Raleway);
-        *,
-        *:before,
-        *:after {
-            margin: 0;
-            padding: 0;
-            -webkit-box-sizing: border-box;
-            -moz-box-sizing: border-box;
-            box-sizing: border-box;
+
+        *, *:before, *:after{
+        margin: 0;
+        padding: 0;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing:border-box;
+        box-sizing: border-box;
         }
-        
+
         .name-text {
             position: absolute;
             bottom: 0%;
             text-align: center;
             font-size: 3.75rem;
             font-weight: 600;
-            color: rgba(255, 255, 255, 0.8);
-            background-color: rgba(0, 0, 0, 0.6);
+            color: rgba(255,255,255, 0.8);
+            background-color: rgba(0,0,0,0.6);
             text-transform: uppercase;
         }
-        
-        .content:hover .name-text {
-            opacity: 0;
+
+        .content:hover .name-text{
+            opacity:0;
         }
-        
-        .content-details h4 {
+
+        .content-details h4{
             text-align: right;
             text-decoration: none;
             font-size: 2rem;
+            
             color: white;
         }
-        
+
         .row {
             content: '';
             clear: both;
             display: flex;
             flex-wrap: wrap;
             margin: 5%;
-        }
-        
+        }        
+
         .content {
-            position: relative;
-            width: 90%;
-            max-width: 400px;
-            margin: 2%;
-            overflow: hidden;
+        position: relative;
+        width: 90%;
+        max-width: 400px;
+        margin: 2%;
+        overflow: hidden;
         }
-        
+
         .content .content-overlay {
-            background: rgba(0, 0, 0, 0.8);
-            position: absolute;
-            height: 99%;
-            width: 100%;
-            left: 0;
-            top: 40%;
-            bottom: 0;
-            right: 0;
-            opacity: 0;
-            -webkit-transition: all 0.4s ease-in-out 0s;
-            -moz-transition: all 0.4s ease-in-out 0s;
-            transition: all 0.4s ease-in-out 0s;
+        background: rgba(0,0,0,0.8);
+        position: absolute;
+        height: 99%;
+        width: 100%;
+        left: 0;
+        top: 40%;
+        bottom: 0;
+        right: 0;
+        opacity: 0;
+        -webkit-transition: all 0.4s ease-in-out 0s;
+        -moz-transition: all 0.4s ease-in-out 0s;
+        transition: all 0.4s ease-in-out 0s;
         }
-        
-        .content:hover .content-overlay {
-            opacity: 1;
+
+        .content:hover .content-overlay{
+        opacity: 1;
         }
-        
-        .content-image {
-            width: 100%;
+
+        .content-image{
+        width: 100%;
         }
-        
+
         .content-details {
-            position: absolute;
-            text-align: center;
-            padding-left: 1em;
-            padding-right: 1em;
-            width: 100%;
-            top: 50%;
-            left: 50%;
-            bottom: 0%;
-            opacity: 0;
-            -webkit-transform: translate(-50%, -50%);
-            -moz-transform: translate(-50%, -50%);
-            transform: translate(-50%, 0%);
-            -webkit-transition: all 0.3s ease-in-out 0s;
-            -moz-transition: all 0.3s ease-in-out 0s;
-            transition: all 0.3s ease-in-out 0s;
+        position: absolute;
+        text-align: center;
+        padding-left: 1em;
+        padding-right: 1em;
+        width: 100%;
+        top: 50%;
+        left: 50%;
+        bottom: 0%;
+        opacity: 0;
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        transform: translate(-50%, 0%);
+        -webkit-transition: all 0.3s ease-in-out 0s;
+        -moz-transition: all 0.3s ease-in-out 0s;
+        transition: all 0.3s ease-in-out 0s;
         }
-        
-        .content:hover .content-details {
-            top: 50%;
-            left: 50%;
-            opacity: 1;
+
+        .content:hover .content-details{
+        top: 50%;
+        left: 50%;
+        opacity: 1;
         }
+
         
-        .content-details p {
-            position: relative;
-            color: #fff;
-            font-size: 1.5rem;
+        .content-details p{
+        position: relative;
+        color: #fff;
+        font-size: 1.5rem;
         }
-        
-        .fadeIn-bottom {
-            top: 80%;
+
+        .fadeIn-bottom{
+        top: 80%;
         }
-        
+
         @media screen and (max-width: 500px) {
             .column {
                 width: 100%;
             }
         }
-    </style>
 
-
+    </style>          
+    
+    
 
     <!-- <div class="container-fluid bg-3 text-center">
         <h3>Sample</h3><br>
@@ -1038,44 +1329,38 @@
                     </div>
 
 
-                    <div class="col-lg-12 col-md-12 col-sm-12 .col-xs-12 ">
-                        <div class="icons ">
-                            <!-- <ul class="social-icon ">
-                                <li class="social-icon__item "><a class="social-icon__link " href="# ">
-                                    <ion-icon name="logo-facebook "></ion-icon>
+                    <div class="col-lg-12 col-md-12 col-sm-12 .col-xs-12">
+                        <div class="icons">
+                            <!-- <ul class="social-icon">
+                                <li class="social-icon__item"><a class="social-icon__link" href="#">
+                                    <ion-icon name="logo-facebook"></ion-icon>
                                     </a></li>
-                                                <li class="social-icon__item ">
-                                                    <a class="social-icon__link " href="# ">
-                                                        <ion-icon name="logo-twitter "></ion-icon>
-                                                    </a>
-                                                </li>
-                                                <li class="social-icon__item ">
-                                                    <a class="social-icon__link " href="# ">
-                                                        <ion-icon name="logo-linkedin "></ion-icon>
-                                                    </a>
-                                                </li>
-                                                <li class="social-icon__item ">
-                                                    <a class="social-icon__link " href="# ">
-                                                        <ion-icon name="logo-instagram "></ion-icon>
-                                                    </a>
-                                                </li>
-                                                </ul> -->
+                                <li class="social-icon__item"><a class="social-icon__link" href="#">
+                                    <ion-icon name="logo-twitter"></ion-icon>
+                                    </a></li>
+                                <li class="social-icon__item"><a class="social-icon__link" href="#">
+                                    <ion-icon name="logo-linkedin"></ion-icon>
+                                    </a></li>
+                                <li class="social-icon__item"><a class="social-icon__link" href="#">
+                                    <ion-icon name="logo-instagram"></ion-icon>
+                                    </a></li>
+                            </ul> -->
 
-                            <ul class="menu ">
-                                <li class="menu__item "><a class="menu__link " href="# ">Home</a></li>
-                                <li class="menu__item "><a class="menu__link " href="# ">About</a></li>
-                                <li class="menu__item "><a class="menu__link " href="# ">Services</a></li>
-                                <li class="menu__item "><a class="menu__link " href="team ">Team</a></li>
-                                <li class="menu__item "><a class="menu__link " href="# ">Contact</a></li>
+                            <ul class="menu">
+                                <li class="menu__item"><a class="menu__link" href="#">Home</a></li>
+                                <li class="menu__item"><a class="menu__link" href="#">About</a></li>
+                                <li class="menu__item"><a class="menu__link" href="#">Services</a></li>
+                                <li class="menu__item"><a class="menu__link" href="team">Team</a></li>
+                                <li class="menu__item"><a class="menu__link" href="#">Contact</a></li>
                             </ul>
 
-                            <p style="text-align: center; font-size: 1.5rem; margin: 1rem ">Designed & Maintained by IIT Jodhpur</p>
-                            <p style="text-align: center; font-size: 1.5rem; margin: 0rem ">&copy; IITJ, 2021 | All Rights Reserved</p>
+                            <p style="text-align: center; font-size: 1.5rem; margin: 1rem">Designed & Maintained by IIT Jodhpur</p>
+                            <p style="text-align: center; font-size: 1.5rem; margin: 0rem">&copy; IITJ, 2021 | All Rights Reserved</p>
                         </div>
-                        <script type="module " src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js "></script>
-                        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js "></script>
+                        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+                        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
-                        <div class="clearfix "></div>
+                        <div class="clearfix"></div>
                         <!-- Flickr Widget End -->
                     </div>
                 </div>
@@ -1146,13 +1431,13 @@
             margin-top: 5%;
             margin-bottom: 0%;
         }
-        
-        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap ");
+
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: "Poppins ", sans-serif;
+            font-family: "Poppins", sans-serif;
         }
         
         .footer {
@@ -1277,9 +1562,9 @@
             font-size: 18px;
         }
         
-        footer input[type="text "],
+        footer input[type="text"],
         footer textarea,
-        .blacksidebar .contact-forms input[type="text "],
+        .blacksidebar .contact-forms input[type="text"],
         .blacksidebar .contact-forms textarea {
             width: 100%;
             margin-bottom: 13px;
@@ -1287,9 +1572,9 @@
             border-radius: 0;
         }
         
-        footer.style1 input[type="text "],
+        footer.style1 input[type="text"],
         footer.style1 textarea,
-        .blacksidebar .contact-forms input[type="text "],
+        .blacksidebar .contact-forms input[type="text"],
         .blacksidebar .contact-forms textarea {
             color: #bdc3c7;
             background: #1d1e20;
@@ -1300,7 +1585,7 @@
             height: 117px;
         }
         
-        header .contact-forms input[type="text "],
+        header .contact-forms input[type="text"],
         header .contact-forms textarea {
             width: 100%;
             margin-bottom: 20px;
@@ -1310,12 +1595,12 @@
             border: #c4c4c4 solid 1px;
         }
         
-        header .contact-forms input[type="submit "],
+        header .contact-forms input[type="submit"],
         header .contact-forms button {
             width: auto !important;
         }
         
-        header .contact-forms input[type="submit "] i,
+        header .contact-forms input[type="submit"] i,
         header .contact-forms button i {
             margin-left: 10px;
         }
@@ -1354,7 +1639,7 @@
         }
     </style>
 
-    <script src="https://unpkg.com/aos@next/dist/aos.js "></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         AOS.init();
     </script>

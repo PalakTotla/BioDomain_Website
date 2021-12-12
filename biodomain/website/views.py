@@ -1,19 +1,9 @@
 from django.shortcuts import render
 from website.models import Instruments
 from website.models import Institute
-from website.models import Categories
+from website.models import Category_Description
 # Create your views here.
 
-from django.core.mail import send_mail
-
-def emailForm(request):
-    if request.method == 'POST':
-        name = request.POST['name']
-        email = request.POST['email']
-        subject = request.POST['subject']
-        message = request.POST['message']
-        message = 'You have a mail from ' + name + '\n' + 'Message: ' + message
-        send_mail(subject, message, 'contactbioequipzon@gmail.com', ['shakya.2@iitj.ac.in'])
 
 def home(request):
     return render(request,'index.html', {})
@@ -25,40 +15,25 @@ def trial(request):
     return render(request,'trial.html', {})    
 
 def BasicEquipments(request):
-    allInst = Instruments.objects.filter(category='Basic')
-    context={'CatInstrument':allInst}
-    return render(request,'BasicEquipments.html', context)  
+    return render(request,'BasicEquipments.html', {})  
 
 def BioimagingEquipments(request):
-    allInst = Instruments.objects.filter(category='Bioimaging')
-    context={'CatInstrument':allInst}
-    return render(request,'BioimagingEquipments.html', context)          
+    return render(request,'BioimagingEquipments.html', {})          
 
 def CentrifugeEquipments(request):
-    allInst = Instruments.objects.filter(category='Centrifuge')
-    context={'CatInstrument':allInst}
-    return render(request,'CentrifugeEquipments.html',context)  
+    return render(request,'CentrifugeEquipments.html', {})  
 
 def CellCultureEquipments(request):
-    allInst = Instruments.objects.filter(category='Cell Culture')
-    context={'CatInstrument':allInst}
-    return render(request,'CellCultureEquipments.html', context)   
-
+    return render(request,'CellCultureEquipments.html', {})  
 
 def ElectrophoresisEquipments(request):
-    allInst = Instruments.objects.filter(category='Electrophoresis')
-    context={'CatInstrument':allInst}
-    return render(request,'ElectrophoresisEquipments.html',context)  
+    return render(request,'ElectrophoresisEquipments.html', {})  
 
 def ChromatographyEquipments(request):
-    allInst = Instruments.objects.filter(category='Chromatography')
-    context={'CatInstrument':allInst}
-    return render(request,'ChromatographyEquipments.html', context)  
+    return render(request,'ChromatographyEquipments.html', {})  
 
 def SpectroscopyEquipments(request):
-    allInst = Instruments.objects.filter(category='Spectroscopy')
-    context={'CatInstrument':allInst}
-    return render(request,'SpectroscopyEquipments.html', context)  
+    return render(request,'SpectroscopyEquipments.html', {})  
 
 def XrayCrystallographyEquipments(request):
     return render(request,'XrayCrystallographyEquipments.html', {})
@@ -83,18 +58,18 @@ def MiscellaneousEquipments(request):
 
 
 
-def InstrumentView(request):
+def InstrumentListpage(request):
     allInst = Instruments.objects.all()
     context={'instruments':allInst}
     return render(request,'instrumentlistpage.html', context)
 
-def InstituteView(request):
+def InstituteListpage(request):
     allInst = Institute.objects.all()
     context={'institute':allInst}
     return render(request,'institutelistpage.html', context)
 
-def CategoryView(request):
-    allCategory = Categories.objects.all()
+def CategoryListpage(request):
+    allCategory = Category_Description.objects.all()
     context={'category':allCategory}
     return render(request,'categorylistpage.html',context)
 
@@ -130,5 +105,3 @@ def contactView(request):
 
 def successView(request):
     return HttpResponse('Your message is successfully sent!')
-
-
