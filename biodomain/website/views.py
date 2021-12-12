@@ -1,27 +1,100 @@
 from django.shortcuts import render
 from website.models import Instruments
 from website.models import Institute
-from website.models import Category_Description
+from website.models import Categories
 # Create your views here.
 
+from django.core.mail import send_mail
+
+def emailForm(request):
+    if request.method == 'POST':
+        name = request.POST['name']
+        email = request.POST['email']
+        subject = request.POST['subject']
+        message = request.POST['message']
+        message = 'You have a mail from ' + name + '\n' + 'Message: ' + message
+        send_mail(subject, message, 'contactbioequipzon@gmail.com', ['shakya.2@iitj.ac.in'])
 
 def home(request):
     return render(request,'index.html', {})
 
+def team(request):
+    return render(request,'team.html', {})
+
+def trial(request):
+    return render(request,'trial.html', {})    
+
+def BasicEquipments(request):
+    allInst = Instruments.objects.filter(category='Basic')
+    context={'CatInstrument':allInst}
+    return render(request,'BasicEquipments.html', context)  
+
+def BioimagingEquipments(request):
+    allInst = Instruments.objects.filter(category='Bioimaging')
+    context={'CatInstrument':allInst}
+    return render(request,'BioimagingEquipments.html', context)          
+
+def CentrifugeEquipments(request):
+    allInst = Instruments.objects.filter(category='Centrifuge')
+    context={'CatInstrument':allInst}
+    return render(request,'CentrifugeEquipments.html',context)  
+
+def CellCultureEquipments(request):
+    allInst = Instruments.objects.filter(category='Cell Culture')
+    context={'CatInstrument':allInst}
+    return render(request,'CellCultureEquipments.html', context)   
 
 
-def InstrumentListpage(request):
+def ElectrophoresisEquipments(request):
+    allInst = Instruments.objects.filter(category='Electrophoresis')
+    context={'CatInstrument':allInst}
+    return render(request,'ElectrophoresisEquipments.html',context)  
+
+def ChromatographyEquipments(request):
+    allInst = Instruments.objects.filter(category='Chromatography')
+    context={'CatInstrument':allInst}
+    return render(request,'ChromatographyEquipments.html', context)  
+
+def SpectroscopyEquipments(request):
+    allInst = Instruments.objects.filter(category='Spectroscopy')
+    context={'CatInstrument':allInst}
+    return render(request,'SpectroscopyEquipments.html', context)  
+
+def XrayCrystallographyEquipments(request):
+    return render(request,'XrayCrystallographyEquipments.html', {})
+
+def SequencingEquipments(request):
+    return render(request,'SequencingEquipments.html', {})  
+
+def PCREquipments(request):
+    return render(request,'PCREquipments.html', {})  
+
+def BioreactorEquipments(request):
+    return render(request,'BioreactorEquipments.html', {})  
+
+def RefrigeratorEquipments(request):
+    return render(request,'RefrigeratorEquipments.html', {})  
+
+def IncubatorEquipments(request):
+    return render(request,'IncubatorEquipments.html', {})  
+
+def MiscellaneousEquipments(request):
+    return render(request,'MiscellaneousEquipments.html', {})      
+
+
+
+def InstrumentView(request):
     allInst = Instruments.objects.all()
     context={'instruments':allInst}
     return render(request,'instrumentlistpage.html', context)
 
-def InstituteListpage(request):
+def InstituteView(request):
     allInst = Institute.objects.all()
     context={'institute':allInst}
     return render(request,'institutelistpage.html', context)
 
-def CategoryListpage(request):
-    allCategory = Category_Description.objects.all()
+def CategoryView(request):
+    allCategory = Categories.objects.all()
     context={'category':allCategory}
     return render(request,'categorylistpage.html',context)
 
@@ -33,3 +106,29 @@ def CategoryListpage(request):
 #     else:
 #         eqpobj=Equipments.objects.raw('select * from Equipments')
 #         return render(request,'listpage.html',{'Equipments':eqpobj})
+
+from django.core.mail import send_mail, BadHeaderError
+from django.http import HttpResponse, HttpResponseRedirect
+from django.shortcuts import render, redirect
+from .forms import ContactForm
+
+def contactView(request):
+    if request.method == 'GET':
+        form = ContactForm()
+    else:
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            subject = form.cleaned_data['subject']
+            from_email = form.cleaned_data['from_email']
+            message = "From: " + from_email + "\n\n" + form.cleaned_data['message']
+            try:
+                send_mail(subject, message, from_email, ['bioequipzone@gmail.com'])
+            except BadHeaderError:
+                return HttpResponse('Invalid header found.')
+            return redirect('success')
+    return render(request, "email.html", {'form': form})
+
+def successView(request):
+    return HttpResponse('Your message is successfully sent!')
+
+

@@ -7,14 +7,116 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.theme.default.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
+
+
+
+</head>
+
+<body>
+    <div class="header" style="text-align: right">
+        <img src="{% static 'images\logo1.gif' %}" alt='IITJ logo' id="right">
+    </div>
+    <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
+    <label for="openSidebarMenu" class="sidebarIconToggle">
+        <div class="spinner diagonal part-1"></div>
+        <div class="spinner horizontal"></div>
+        <div class="spinner diagonal part-2"></div>
+    </label>
+    <div id="sidebarMenu">
+        <ul class="sidebarMenuInner">
+            <li><a href="#" target="_blank">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="team" target="_blank">Meet Our Team</a></li>
+            <!-- <li><a href="https://twitter.com/plavookac" target="_blank">Twitter</a></li>
+            <li><a href="https://www.youtube.com/channel/UCDfZM0IK6RBgud8HYGFXAJg" target="_blank">YouTube</a></li> -->
+
+        </ul>
+    </div>
+
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="bg"></div>
+    <div class="bg bg2"></div>
+    <div class="bg bg3"></div>
+
+    <div class="container text-center" style="height: 60vh; margin-top: 15%">
+        <h1 class="animate__animated animate__slideInUp ">BioEquipZon</h1>
+        <h4 class="animate__animated animate__fadeIn animate__delay-1s">Access the equipments in your zone</h4>
+
+        <a href="/instruments"><button class="button "><span>List of Equipments<br></span></button></a>
+    </div>
+    <div class="container text-center" style="height: 10vh; margin-top: 1%">
+
+        <button class="button " data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"><span>About<br></span></button>
+
+        <div class="collapse" id="collapseExample">
+            <div class="card card-body">
+                This website is a platform for the researchers to find the equipments in different institutes.
+            </div>
+
+        </div>
+    </div>
     <style>
+        .card {
+            font-size: 20px;
+            background-color: #0b4d07;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            padding: 20px;
+        }
+        
+        .form-control {
+            font-size: 20px;
+            padding: 20px;
+        }
+        
+        .list_button_div {
+            z-index: 50;
+            justify-content: center;
+            align-items: center;
+            height: 5%;
+            width: 30%;
+            background-color: #013b03
+        }
+        
         .navbar {
             color: white;
             background-color: #013b03;
@@ -31,13 +133,6 @@
             color: black;
         }
         
-        .jumbotron {
-            padding-top: 150px;
-            color: Black;
-            background: url("static/images/greenbg.png");
-            height: 70vh;
-        }
-        
         .button {
             border-radius: 20px;
             background-color: #004f34;
@@ -51,47 +146,30 @@
             width: 300px;
             transition: all 0.5s;
             cursor: pointer;
-            margin-top: 150px;
-            margin-left: 600px;
         }
         
-        .button span {
-            cursor: pointer;
-            display: inline-block;
-            position: relative;
-            transition: 0.5s;
+        #about_button:hover {
+            background-color: #004f34;
         }
         
-        .button span:after {
-            content: '\00bb';
-            position: absolute;
-            opacity: 0;
-            top: 0;
-            right: -20px;
-            transition: 0.5s;
+        .about_content {
+            background-color: #004f34;
         }
         
-        .button:hover span {
-            padding-right: 25px;
-        }
-        
-        .button:hover span:after {
-            opacity: 1;
-            right: 0;
-        }
-
-
         @import url('https://fonts.googleapis.com/css?family=Varela+Round');
-        html, body {
+        html,
+        body {
             overflow-x: hidden;
             height: 100%;
         }
+        
         body {
             background: #fff;
             padding: 0;
             margin: 0;
             font-family: 'Varela Round', sans-serif;
         }
+        
         .header {
             display: block;
             margin: 0 auto;
@@ -100,29 +178,38 @@
             box-shadow: none;
             background-color: #004f34;
             position: fixed;
-            height: 60px!important;
+            height: 10% !important;
             overflow: hidden;
             z-index: 10;
         }
+        
+        .header img {
+            height: 80%;
+            padding: 0.75% 1.5% 0 0;
+        }
+        
         .main {
             margin: 0 auto;
             display: block;
             height: 100%;
             margin-top: 60px;
         }
-        .mainInner{
+        
+        .mainInner {
             display: table;
             height: 100%;
             width: 100%;
             text-align: center;
         }
-        .mainInner div{
-            display:table-cell;
+        
+        .mainInner div {
+            display: table-cell;
             vertical-align: middle;
             font-size: 3em;
             font-weight: bold;
             letter-spacing: 1.25px;
         }
+        
         #sidebarMenu {
             height: 100%;
             position: fixed;
@@ -131,14 +218,17 @@
             margin-top: 60px;
             transform: translateX(-250px);
             transition: transform 250ms ease-in-out;
-            background: linear-gradient(180deg, #004f34 0%, #a2e63c 100%);
+            background: linear-gradient(180deg, #004f34 0%, rgb(64, 204, 83) 100%);
+            z-index: 10;
         }
-        .sidebarMenuInner{
-            margin:0;
-            padding:0;
+        
+        .sidebarMenuInner {
+            margin: 0;
+            padding: 0;
             border-top: 1px solid rgba(255, 255, 255, 0.10);
         }
-        .sidebarMenuInner li{
+        
+        .sidebarMenuInner li {
             list-style: none;
             color: #fff;
             text-transform: uppercase;
@@ -147,27 +237,31 @@
             cursor: pointer;
             border-bottom: 1px solid rgba(255, 255, 255, 0.10);
         }
-        .sidebarMenuInner li span{
+        
+        .sidebarMenuInner li span {
             display: block;
             font-size: 14px;
             color: rgba(255, 255, 255, 0.50);
         }
-        .sidebarMenuInner li a{
+        
+        .sidebarMenuInner li a {
             color: #fff;
             text-transform: uppercase;
             font-weight: bold;
             cursor: pointer;
             text-decoration: none;
         }
-        input[type="checkbox"]:checked ~ #sidebarMenu {
+        
+        input[type="checkbox"]:checked~#sidebarMenu {
             transform: translateX(0);
         }
-
+        
         input[type=checkbox] {
             transition: all 0.3s;
             box-sizing: border-box;
             display: none;
         }
+        
         .sidebarIconToggle {
             transition: all 0.3s;
             box-sizing: border-box;
@@ -181,6 +275,7 @@
             height: 22px;
             width: 22px;
         }
+        
         .spinner {
             transition: all 0.3s;
             box-sizing: border-box;
@@ -189,6 +284,7 @@
             width: 100%;
             background-color: #fff;
         }
+        
         .horizontal {
             transition: all 0.3s;
             box-sizing: border-box;
@@ -196,12 +292,14 @@
             float: left;
             margin-top: 3px;
         }
+        
         .diagonal.part-1 {
             position: relative;
             transition: all 0.3s;
             box-sizing: border-box;
             float: left;
         }
+        
         .diagonal.part-2 {
             transition: all 0.3s;
             box-sizing: border-box;
@@ -209,157 +307,1057 @@
             float: left;
             margin-top: 3px;
         }
-        input[type=checkbox]:checked ~ .sidebarIconToggle > .horizontal {
+        
+        input[type=checkbox]:checked~.sidebarIconToggle>.horizontal {
             transition: all 0.3s;
             box-sizing: border-box;
             opacity: 0;
         }
-        input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-1 {
+        
+        input[type=checkbox]:checked~.sidebarIconToggle>.diagonal.part-1 {
             transition: all 0.3s;
             box-sizing: border-box;
             transform: rotate(135deg);
             margin-top: 8px;
         }
-        input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
+        
+        input[type=checkbox]:checked~.sidebarIconToggle>.diagonal.part-2 {
             transition: all 0.3s;
             box-sizing: border-box;
             transform: rotate(-135deg);
             margin-top: -9px;
         }
     </style>
-</head>
-
-<body>
 
 
-    <div class="header"></div>
-    <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
-    <label for="openSidebarMenu" class="sidebarIconToggle">
-        <div class="spinner diagonal part-1"></div>
-        <div class="spinner horizontal"></div>
-        <div class="spinner diagonal part-2"></div>
-    </label>
-    <div id="sidebarMenu">
-        <ul class="sidebarMenuInner">
-        <li>Jelena Jovanovic <span>Web Developer</span></li>
-        <li><a href="https://vanila.io" target="_blank">Company</a></li>
-        <li><a href="https://instagram.com/plavookac" target="_blank">Instagram</a></li>
-        <li><a href="https://twitter.com/plavookac" target="_blank">Twitter</a></li>
-        <li><a href="https://www.youtube.com/channel/UCDfZM0IK6RBgud8HYGFXAJg" target="_blank">YouTube</a></li>
-        <li><a href="https://www.linkedin.com/in/plavookac/" target="_blank">Linkedin</a></li>
-        </ul>
-    </div>
+    <style>
+        .bg {
+            animation: slide 3s ease-in-out infinite alternate;
+            background-image: linear-gradient(-60deg, rgb(64, 204, 83) 50%, rgb(9, 180, 123) 50%);
+            bottom: 0;
+            left: -50%;
+            opacity: .5;
+            position: fixed;
+            right: -50%;
+            top: 0;
+            z-index: -1;
+        }
+        
+        .bg2 {
+            animation-direction: alternate-reverse;
+            animation-duration: 4s;
+        }
+        
+        .bg3 {
+            animation-duration: 5s;
+        }
+        
+        h1 {
+            font-size: 7.5rem;
+            padding-bottom: 2%;
+        }
+        
+        h4 {
+            padding-bottom: 15%;
+        }
+        
+        @keyframes slide {
+            0% {
+                transform: translateX(-25%);
+            }
+            100% {
+                transform: translateX(25%);
+            }
+        }
+    </style>
 
-    <nav class="navbar navbar-inverse">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-            </div>
-            <div class="collapse navbar-collapse" id="myNavbar">
-                <ul class="nav navbar-nav">
-                    <li><a href="#about">About</a></li>
-                </ul>
+    <!-- <div class=about_section>
+        <div style="visibility: hidden; position: absolute; width: 0px; height: 0px;">
+          <svg xmlns="http://www.w3.org/2000/svg">
+            <symbol viewBox="0 0 24 24" id="expand-more">
+              <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"/><path d="M0 0h24v24H0z" fill="none"/>
+            </symbol>
+            <symbol viewBox="0 0 24 24" id="close">
+              <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/><path d="M0 0h24v24H0z" fill="none"/>
+            </symbol>
+          </svg>
+        </div>
+        
+        <details>
+          <summary>
+            About
+            <svg class="control-icon control-icon-expand" width="24" height="24" role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#expand-more" /></svg>
+            <svg class="control-icon control-icon-close" width="24" height="24" role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close" /></svg>
+          </summary>
+          <p>This website contains information about biology and bioengineering related equipments and instruments present in various institute.</p>
+        </details>
+    </div> -->
+
+    <style>
+        .about_section details {
+            background-color: rgba(0, 79, 52, 0.8);
+            width: 50%;
+            min-height: 60px;
+            max-width: 700px;
+            padding: 20px 20px 20px 20px;
+            margin: 0 auto;
+            position: relative;
+            font-size: 24px;
+            border: 1px solid rgba(0, 0, 0, .1);
+            border-radius: 20px;
+            box-sizing: border-box;
+            transition: all .3s;
+        }
+        
+        .about_section details+details {
+            margin-top: 20px;
+        }
+        
+        .about_section details[open] {
+            min-height: 50px;
+            text-align: justify-content;
+            background-color: rgba(0, 79, 52, 0.8);
+            box-shadow: 2px 2px 20px rgba(0, 0, 0, .2);
+        }
+        
+        .about_section details p {
+            color: white;
+            padding-top: 5%;
+            font-size: 2rem;
+            font-weight: 300;
+        }
+        
+        .about_section summary {
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 500;
+            cursor: pointer;
+        }
+        
+        .about_section summary:focus {
+            outline: none;
+        }
+        
+        .about_section summary:focus::after {
+            content: "";
+            height: 100%;
+            width: 100%;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        
+        .about_section summary::-webkit-details-marker {
+            display: none
+        }
+        
+        .control-icon {
+            fill: white;
+            transition: .3s ease;
+            pointer-events: none;
+        }
+        
+        .control-icon-close {
+            display: none;
+        }
+        
+        .about_section details[open] .control-icon-close {
+            display: initial;
+            transition: .3s ease;
+        }
+        
+        .about_section details[open] .control-icon-expand {
+            display: none;
+        }
+    </style>
+
+
+
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+
+                } else {
+                    content.style.display = "block";
+
+                }
+            });
+        }
+    </script>
+
+    <!-- <div class="catagories">
+        <h3>Categories</h3>
+    </div> -->
+
+
+
+    <div class="row">
+        <div class="content">
+            <div class="content-overlay"></div>
+            <img class="content-image" src="{% static 'images\Basic.png' %}" alt='Basic'>
+            <h3 class="name-text">Basic</h3>
+            <div class="content-details fadeIn-bottom">
+                <p class="content-text">This is a short description. This is a short description. This is a short description. This is a short description. This is a short description.</p>
+                <li>
+                    <a href="BasicEquipments">
+                        <h4>View more</h4>
+                    </a>
+                </li>
             </div>
         </div>
-    </nav>
 
-    <div class="jumbotron">
-        <div class="container text-center">
-            <h1>BioEquipZon</h1>
-            <p>get the equipments in your zone</p>
+        <div class="content">
+            <div class="content-overlay"></div>
+            <img class="content-image" src="{% static 'images\Bioimaging.png' %}" alt='Bioimaging'>
+            <h3 class="name-text">Bioimaging</h3>
+            <div class="content-details fadeIn-bottom">
+                <p class="content-text">This is a short description. This is a short description. This is a short description. This is a short description. This is a short description.</p>
+                <li>
+                    <a href="BioimagingEquipments">
+                        <h4>View more</h4>
+                    </a>
+                </li>
+            </div>
         </div>
-        <a href="/instrumentlistpage"><button class="button"><span>List of Equipments<br></span></button></a>
+
+        <div class="content">
+            <div class="content-overlay"></div>
+            <img class="content-image" src="{% static 'images\Centrifuge.png' %}" alt='Centrifuge'>
+            <h3 class="name-text">Centrifuge</h3>
+            <div class="content-details fadeIn-bottom">
+                <p class="content-text">This is a short description. This is a short description. This is a short description. This is a short description. This is a short description.</p>
+                <li>
+                    <a href="CentrifugeEquipments">
+                        <h4>View more</h4>
+                    </a>
+                </li>
+            </div>
+        </div>
     </div>
 
-    <div class="container-fluid bg-3 text-center" id="about">        
+    <div class="row">
+        <div class="content">
+            <div class="content-overlay"></div>
+            <img class="content-image" src="{% static 'images\CellCulture.png' %}" alt='Cell Culture'>
+            <h3 class="name-text">Cell Culture</h3>
+            <div class="content-details fadeIn-bottom">
+                <p class="content-text">This is a short description. This is a short description. This is a short description. This is a short description. This is a short description.</p>
+                <li>
+                    <a href="CellCultureEquipments">
+                        <h4>View more</h4>
+                    </a>
+                </li>
+            </div>
+        </div>
 
+        <div class="content">
+            <div class="content-overlay"></div>
+            <img class="content-image" src="{% static 'images\Electrophoresis.png' %}" alt='Electrophoresis' style="height: 110%;">
+            <h3 class="name-text">Electrophoresis</h3>
+            <div class="content-details fadeIn-bottom">
+                <p class="content-text">This is a short description. This is a short description. This is a short description. This is a short description. This is a short description.</p>
+                <li>
+                    <a href="ElectrophoresisEquipments">
+                        <h4>View more</h4>
+                    </a>
+                </li>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="content-overlay"></div>
+            <img class="content-image" src="{% static 'images\Chromatography.png' %}" alt='Chromatography'>
+            <h3 class="name-text">Chromatography</h3>
+            <div class="content-details fadeIn-bottom">
+                <p class="content-text">This is a short description. This is a short description. This is a short description. This is a short description. This is a short description.</p>
+                <li>
+                    <a href="ChromatographyEquipments">
+                        <h4>View more</h4>
+                    </a>
+                </li>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="content">
+            <div class="content-overlay"></div>
+            <img class="content-image" src="{% static 'images\Spectroscopy.png' %}" alt='Spectroscopy'>
+            <h3 class="name-text">Spectroscopy</h3>
+            <div class="content-details fadeIn-bottom">
+                <p class="content-text">This is a short description. This is a short description. This is a short description. This is a short description. This is a short description.</p>
+                <li>
+                    <a href="SpectroscopyEquipments">
+                        <h4>View more</h4>
+                    </a>
+                </li>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="content-overlay"></div>
+            <img class="content-image" src="{% static 'images\X-rayCrystallography.png' %}" alt='X-ray Crystallography'>
+            <h3 class="name-text">X-ray Crystallography</h3>
+            <div class="content-details fadeIn-bottom">
+                <p class="content-text">This is a short description. This is a short description. This is a short description. This is a short description. This is a short description.</p>
+                <li>
+                    <a href="XrayCrystallographyEquipments">
+                        <h4>View more</h4>
+                    </a>
+                </li>
+            </div>
+        </div>
+
+        <div class="content">
+            <div id="owl-example" class="owl-carousel">
+                <div class="owl_text">
+                    <div class="content-overlay"></div>
+                    <img class="content-image" src="{% static 'images\Sequencing.png' %}" alt='Sequencing'>
+                    <h3 class="name-text">Sequencing</h3>
+                    <div class="content-details fadeIn-bottom">
+                        <p class="content-text" style="padding: 0 10% 0 10%;">This is a short description. This is a short description. This is a short description. This is a short description. This is a short description.</p>
+                        <li>
+                            <a href="SequencingEquipments">
+                                <h4>View more</h4>
+                            </a>
+                        </li>
+                    </div>
+                </div>
+                <div class="owl_text">
+                    <div class="content-overlay"></div>
+                    <img class="content-image" src="{% static 'images\PCR.png' %}" alt='PCR'>
+                    <h3 class="name-text">PCR</h3>
+                    <div class="content-details fadeIn-bottom">
+                        <p class="content-text" style="padding: 0 10% 0 10%;">This is a short description. This is a short description. This is a short description. This is a short description. This is a short description.</p>
+                        <li>
+                            <a href="PCREquipments">
+                                <h4>View more</h4>
+                            </a>
+                        </li>
+                    </div>
+                </div>
+                <div class="owl_text">
+                    <div class="content-overlay"></div>
+                    <img class="content-image" src="{% static 'images\Refrigerators.png' %}" alt='Refrigerators'>
+                    <h3 class="name-text">Refrigerators</h3>
+                    <div class="content-details fadeIn-bottom">
+                        <p class="content-text" style="padding: 0 10% 0 10%;">This is a short description. This is a short description. This is a short description. This is a short description. This is a short description.</p>
+                        <li>
+                            <a href="RefrigeratorEquipments">
+                                <h4>View more</h4>
+                            </a>
+                        </li>
+                    </div>
+                </div>
+                <div class="owl_text">
+                    <div class="content-overlay"></div>
+                    <img class="content-image" src="{% static 'images\Bioreactors.png' %}" alt='Bioreactors'>
+                    <h3 class="name-text">Bioreactors</h3>
+                    <div class="content-details fadeIn-bottom">
+                        <p class="content-text" style="padding: 0 10% 0 10%;">This is a short description. This is a short description. This is a short description. This is a short description. This is a short description.</p>
+                        <li>
+                            <a href="BioreactorEquipments">
+                                <h4>View more</h4>
+                            </a>
+                        </li>
+                    </div>
+                </div>
+                <div class="owl_text">
+                    <div class="content-overlay"></div>
+                    <img class="content-image" src="{% static 'images\Incubators.png' %}" alt='Incubators'>
+                    <h3 class="name-text">Incubators</h3>
+                    <div class="content-details fadeIn-bottom">
+                        <p class="content-text" style="padding: 0 10% 0 10%;">This is a short description. This is a short description. This is a short description. This is a short description. This is a short description.</p>
+                        <li>
+                            <a href="IncubatorEquipments">
+                                <h4>View more</h4>
+                            </a>
+                        </li>
+                    </div>
+                </div>
+                <div class="owl_text">
+                    <div class="content-overlay"></div>
+                    <img class="content-image" src="{% static 'images\Miscellaneous.png' %}" alt='Miscellaneous'>
+                    <h3 class="name-text">Miscellaneous</h3>
+                    <div class="content-details fadeIn-bottom">
+                        <p class="content-text" style="padding: 0 10% 0 10%;">This is a short description. This is a short description. This is a short description. This is a short description. This is a short description.</p>
+                        <li>
+                            <a href="MiscellaneousEquipments">
+                                <h4>View more</h4>
+                            </a>
+                        </li>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .owl-nav {
+            position: absolute;
+            top: calc(50%);
+            width: 100%;
+        }
+        
+        .owl-nav div {
+            position: absolute;
+            top: 10%;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+        
+        .owl-prev {
+            left: 0;
+            display: flex;
+            background: white;
+        }
+        
+        .owl-prev:hover {
+            background: rgba(0, 0, 0, 0.5);
+            color: #fff;
+        }
+        
+        .owl-next {
+            right: 0;
+            display: flex;
+            background: white;
+        }
+        
+        .owl-next:hover {
+            background: rgba(0, 0, 0, 0.5);
+            color: #fff;
+        }
+        
+        .owl-prev i,
+        .owl-next i {
+            margin: auto;
+        }
+    </style>
+
+
+    <script>
+        $(document).ready(function() {
+            $("#owl-example").owlCarousel({
+                navigation: true, // Show next and prev buttons
+                slideSpeed: 300,
+                margin: 10,
+                paginationSpeed: 400,
+                autoplay: false,
+                items: 1,
+                itemsDesktop: false,
+                itemsDesktopSmall: false,
+                itemsTablet: false,
+                itemsMobile: false,
+                loop: true,
+                nav: true,
+                navText: ["<i class='fa fa-angle-left fa-2x' aria-hidden='true'></i>", "<i class='fa fa-angle-right fa-2x' aria-hidden='true'></i>"]
+            });
+        });
+    </script>
+
+
+
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Raleway);
+        *,
+        *:before,
+        *:after {
+            margin: 0;
+            padding: 0;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+        
+        .name-text {
+            position: absolute;
+            bottom: 0%;
+            text-align: center;
+            font-size: 3.75rem;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.8);
+            background-color: rgba(0, 0, 0, 0.6);
+            text-transform: uppercase;
+        }
+        
+        .content:hover .name-text {
+            opacity: 0;
+        }
+        
+        .content-details h4 {
+            text-align: right;
+            text-decoration: none;
+            font-size: 2rem;
+            color: white;
+        }
+        
+        .row {
+            content: '';
+            clear: both;
+            display: flex;
+            flex-wrap: wrap;
+            margin: 5%;
+        }
+        
+        .content {
+            position: relative;
+            width: 90%;
+            max-width: 400px;
+            margin: 2%;
+            overflow: hidden;
+        }
+        
+        .content .content-overlay {
+            background: rgba(0, 0, 0, 0.8);
+            position: absolute;
+            height: 99%;
+            width: 100%;
+            left: 0;
+            top: 40%;
+            bottom: 0;
+            right: 0;
+            opacity: 0;
+            -webkit-transition: all 0.4s ease-in-out 0s;
+            -moz-transition: all 0.4s ease-in-out 0s;
+            transition: all 0.4s ease-in-out 0s;
+        }
+        
+        .content:hover .content-overlay {
+            opacity: 1;
+        }
+        
+        .content-image {
+            width: 100%;
+        }
+        
+        .content-details {
+            position: absolute;
+            text-align: center;
+            padding-left: 1em;
+            padding-right: 1em;
+            width: 100%;
+            top: 50%;
+            left: 50%;
+            bottom: 0%;
+            opacity: 0;
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            transform: translate(-50%, 0%);
+            -webkit-transition: all 0.3s ease-in-out 0s;
+            -moz-transition: all 0.3s ease-in-out 0s;
+            transition: all 0.3s ease-in-out 0s;
+        }
+        
+        .content:hover .content-details {
+            top: 50%;
+            left: 50%;
+            opacity: 1;
+        }
+        
+        .content-details p {
+            position: relative;
+            color: #fff;
+            font-size: 1.5rem;
+        }
+        
+        .fadeIn-bottom {
+            top: 80%;
+        }
+        
+        @media screen and (max-width: 500px) {
+            .column {
+                width: 100%;
+            }
+        }
+    </style>
+
+
+
+    <!-- <div class="container-fluid bg-3 text-center">
+        <h3>Sample</h3><br>
         <div class="row">
+            <div class="col-sm-3" data-aos="zoom-out-up" data-aos-duration="2000">
+                <p>Sample</p>
+                <img src="{% static 'images/log.png' %}" class="img-responsive" style="width:100%" alt="Image">
+            </div>
+            <div class="col-sm-3" data-aos="zoom-out-up" data-aos-duration="2000">
+                <p>Sample</p>
+                <img src="{% static 'images/log.png' %}" class="img-responsive" style="width:100%" alt="Image">
+            </div>
+            <div class="col-sm-3" data-aos="zoom-out-up" data-aos-duration="2000">
+                <p>Sample</p>
+                <img src="{% static 'images/log.png' %}" class="img-responsive" style="width:100%" alt="Image">
+            </div>
+            <div class="col-sm-3" data-aos="zoom-out-up" data-aos-duration="2000">
+                <p>Sample</p>
+                <img src="{% static 'images/log.png' %}" class="img-responsive" style="width:100%" alt="Image">
+            </div>
+        </div>
+    </div><br>    
 
-        </div><br>
-        <div class="container-fluid bg-3 text-center">
-            <h3>About</h3> This website contains the information about biology-biotechnical equipments and instruments present in various institute. <br>Here are some categories of equipments one can find.</div>
+    <div class="container-fluid bg-3 text-center" id="about">
+        <h3>Sample</h3><br>
+        <div class="row">
+            <div class="col-sm-3" data-aos="zoom-in-up" data-aos-duration="1000">
+                <p>Sample</p>
+                <img src="{% static 'images/log.png' %}" class="img-responsive" style="width:100%" alt="Image">
+            </div>
+            <div class="col-sm-3" data-aos="zoom-in-down" data-aos-duration="1000">
+                <p>Sample</p>
+                <img src="{% static 'images/log.png' %}" class="img-responsive" style="width:100%" alt="Image">
+            </div>
+            <div class="col-sm-3" data-aos="zoom-in-up" data-aos-duration="1000">
+                <p>Sample</p>
+                <img src="{% static 'images/log.png' %}" class="img-responsive" style="width:100%" alt="Image">
+            </div>
+            <div class="col-sm-3" data-aos="zoom-in-down" data-aos-duration="1000">
+                <p>Sample</p>
+                <img src="{% static 'images/log.png' %}" class="img-responsive" style="width:100%" alt="Image">
+            </div>
+        </div>
+    </div><br>
 
-        <div class="container-fluid bg-3 text-center">
-            <h3>Sample</h3><br>
-            <div class="row">
-                <div class="col-sm-3" data-aos="zoom-out-up" data-aos-duration="2000">
-                    <p>Sample</p>
-                    <img src="{% static 'images/log.png' %}" class="img-responsive" style="width:100%" alt="Image">
-                </div>
-                <div class="col-sm-3" data-aos="zoom-out-up" data-aos-duration="2000">
-                    <p>Sample</p>
-                    <img src="{% static 'images/log.png' %}" class="img-responsive" style="width:100%" alt="Image">
-                </div>
-                <div class="col-sm-3" data-aos="zoom-out-up" data-aos-duration="2000">
-                    <p>Sample</p>
-                    <img src="{% static 'images/log.png' %}" class="img-responsive" style="width:100%" alt="Image">
-                </div>
-                <div class="col-sm-3" data-aos="zoom-out-up" data-aos-duration="2000">
-                    <p>Sample</p>
-                    <img src="{% static 'images/log.png' %}" class="img-responsive" style="width:100%" alt="Image">
+    <div class="container-fluid bg-3 text-center" id="about">
+        <h3>Sample</h3><br>
+        <div class="row">
+            <div class="col-sm-3" data-aos="zoom-in-up" data-aos-duration="1000">
+                <p>Sample</p>
+                <img src="{% static 'images/log.png' %}" class="img-responsive" style="width:100%" alt="Image">
+            </div>
+            <div class="col-sm-3" data-aos="zoom-in-down" data-aos-duration="1000">
+                <p>Sample</p>
+                <img src="{% static 'images/log.png' %}" class="img-responsive" style="width:100%" alt="Image">
+            </div>
+            <div class="col-sm-3" data-aos="zoom-in-up" data-aos-duration="1000">
+                <p>Sample</p>
+                <img src="{% static 'images/log.png' %}" class="img-responsive" style="width:100%" alt="Image">
+            </div>
+            <div class="col-sm-3" data-aos="zoom-in-down" data-aos-duration="1000">
+                <p>Sample</p>
+                <img src="{% static 'images/log.png' %}" class="img-responsive" style="width:100%" alt="Image">
+            </div>
+        </div>
+    </div><br> -->
+
+    <div>
+        <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+            <defs>
+                <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+            </defs>
+            <g class="parallax">
+                <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(0,79,52,0.7)" />
+                <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(0,79,52,0.5)" />
+                <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(0,79,52,0.3)" />
+                <use xlink:href="#gentle-wave" x="48" y="7" fill="#004f34" />
+            </g>
+        </svg>
+    </div>
+
+    <!-- Google Map -->
+    <div class="mapouter">
+        <div class="gmap_canvas">
+            <iframe width="100%" height="100%" background-color="#004f34" id="gmap_canvas" src="https://maps.google.com/maps?q=Indian%20Institute%20of%20Technology,%20Jodhpur,%20342037&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" style="border:0" allowfullscreen></iframe>
+            <a href="https://123movies-org.net"></a>
+        </div>
+    </div>
+
+    <style>
+        .mapouter {
+            background-color: #004f34;
+            position: relative;
+            text-align: right;
+            height: 70%;
+            width: 100%;
+        }
+        
+        .gmap_canvas {
+            overflow: hidden;
+            height: 100%;
+            width: 100%;
+            padding: 5% 10% 0% 10%;
+        }
+    </style>
+    <!-- Google Map -->
+
+
+    <footer id="footer">
+        <div class="footer">
+            <div class="container box">
+                <div class="row footerwidgets">
+                    <div class="col-lg-6 col-md-6 col-sm-6 .col-xs-12">
+                        <!-- Text Widget start -->
+                        <div class="widget">
+                            <div class="text-widget">
+                                <h2 class="heading">Address</h2>
+                                <div class="textsec">
+                                    <li style="font-size: 3rem"><i class="fa fa-map-marker" style="font-size: 3rem"></i> Indian Institute of Technology, Jodhpur</li>
+                                    <p>
+                                        N.H. 65, Nagaur Road,<br> Karwar 342037,<br> Jodhpur, Rajasthan
+                                    </p>
+
+                                    <ul class="contactdetail">
+                                        <li><i class="fa fa-mobile" style="padding: 1.5%; font-size: 2rem"></i> Tel: +91 (0) 291 280 1211</li>
+                                        <li><i class="fa fa-envelope" style="padding: 1.5%"></i><a href="mailto:bioequipzon@gmail.com"> bioequipzon@gmail.com</a></li>
+                                        <li><i class="fa fa-star" style="padding: 1.5%"></i><a href="#">Give feedback</a></li>
+                                    </ul>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                        <!-- Text Widget start -->
+                    </div>
+
+
+                    <div class="col-lg-6 col-md-12 col-sm-12 .col-xs-12">
+                        <div class="widget widget-contact ">
+                            <a href="/contact"><button class="button "><span>Contact via a Message<br></span></button></a>
+                            <!-- <h2 class="heading">Contact us via message</h2> -->
+                            <!-- <div class="contact-forms">
+                                <form action="mail.php" method="post" enctype="text/plain">
+                                    <input type="text" name="name" class="form-control" placeholder="Your Name " /><br>
+                                    <input type="text " name="email" class="form-control" placeholder="Email Address " /><br>
+                                    <input type="text " class="form-control" name="subject" placeholder="Subject " /><br>
+                                    <textarea name="message" class="form-control" placeholder="Message "></textarea><br>
+                                    <button class="order btn btn-primary " type="submit " name="submit" value="Send "> Send</button>
+                                    <!-- <h5 class="order btn btn-primary ">Send</h5> -->
+                                </form>
+                            </div> -->
+                        </div>
+                    </div>
+
+
+                    <div class="col-lg-12 col-md-12 col-sm-12 .col-xs-12 ">
+                        <div class="icons ">
+                            <!-- <ul class="social-icon ">
+                                <li class="social-icon__item "><a class="social-icon__link " href="# ">
+                                    <ion-icon name="logo-facebook "></ion-icon>
+                                    </a></li>
+                                                <li class="social-icon__item ">
+                                                    <a class="social-icon__link " href="# ">
+                                                        <ion-icon name="logo-twitter "></ion-icon>
+                                                    </a>
+                                                </li>
+                                                <li class="social-icon__item ">
+                                                    <a class="social-icon__link " href="# ">
+                                                        <ion-icon name="logo-linkedin "></ion-icon>
+                                                    </a>
+                                                </li>
+                                                <li class="social-icon__item ">
+                                                    <a class="social-icon__link " href="# ">
+                                                        <ion-icon name="logo-instagram "></ion-icon>
+                                                    </a>
+                                                </li>
+                                                </ul> -->
+
+                            <ul class="menu ">
+                                <li class="menu__item "><a class="menu__link " href="# ">Home</a></li>
+                                <li class="menu__item "><a class="menu__link " href="# ">About</a></li>
+                                <li class="menu__item "><a class="menu__link " href="# ">Services</a></li>
+                                <li class="menu__item "><a class="menu__link " href="team ">Team</a></li>
+                                <li class="menu__item "><a class="menu__link " href="# ">Contact</a></li>
+                            </ul>
+
+                            <p style="text-align: center; font-size: 1.5rem; margin: 1rem ">Designed & Maintained by IIT Jodhpur</p>
+                            <p style="text-align: center; font-size: 1.5rem; margin: 0rem ">&copy; IITJ, 2021 | All Rights Reserved</p>
+                        </div>
+                        <script type="module " src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js "></script>
+                        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js "></script>
+
+                        <div class="clearfix "></div>
+                        <!-- Flickr Widget End -->
+                    </div>
                 </div>
             </div>
-        </div><br>
-
-        <div class="container-fluid bg-3 text-center" id="about">
-            <h3>Sample</h3><br>
-            <div class="row">
-                <div class="col-sm-3" data-aos="zoom-in-up" data-aos-duration="1000">
-                    <p>Sample</p>
-                    <img src="{% static 'images/log.png' %}" class="img-responsive" style="width:100%" alt="Image">
-                </div>
-                <div class="col-sm-3" data-aos="zoom-in-down" data-aos-duration="1000">
-                    <p>Sample</p>
-                    <img src="{% static 'images/log.png' %}" class="img-responsive" style="width:100%" alt="Image">
-                </div>
-                <div class="col-sm-3" data-aos="zoom-in-up" data-aos-duration="1000">
-                    <p>Sample</p>
-                    <img src="{% static 'images/log.png' %}" class="img-responsive" style="width:100%" alt="Image">
-                </div>
-                <div class="col-sm-3" data-aos="zoom-in-down" data-aos-duration="1000">
-                    <p>Sample</p>
-                    <img src="{% static 'images/log.png' %}" class="img-responsive" style="width:100%" alt="Image">
-                </div>
-            </div>
-        </div><br>
+        </div>
+    </footer>
 
 
+    <style>
+        /*Waves*/
+        
+        .waves {
+            position: relative;
+            width: 100%;
+            height: 15vh;
+            margin-bottom: -7px;
+            /*Fix for safari gap*/
+            min-height: 100px;
+            max-height: 400px;
+        }
+        /* Animation */
+        
+        .parallax>use {
+            animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
+        }
+        
+        .parallax>use:nth-child(1) {
+            animation-delay: -2s;
+            animation-duration: 7s;
+        }
+        
+        .parallax>use:nth-child(2) {
+            animation-delay: -3s;
+            animation-duration: 10s;
+        }
+        
+        .parallax>use:nth-child(3) {
+            animation-delay: -4s;
+            animation-duration: 13s;
+        }
+        
+        .parallax>use:nth-child(4) {
+            animation-delay: -5s;
+            animation-duration: 20s;
+        }
+        
+        @keyframes move-forever {
+            0% {
+                transform: translate3d(-90px, 0, 0);
+            }
+            100% {
+                transform: translate3d(85px, 0, 0);
+            }
+        }
+        /*Shrinking for mobile*/
+        
+        @media (max-width: 768px) {
+            .waves {
+                height: 40px;
+                min-height: 40px;
+            }
+            .content {
+                height: 30vh;
+            }
+        }
+        
+        .icons {
+            margin-top: 5%;
+            margin-bottom: 0%;
+        }
+        
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap ");
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins ", sans-serif;
+        }
+        
+        .footer {
+            position: relative;
+            width: 100%;
+            background: #004f34;
+            min-height: 100px;
+            padding-top: 5%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            color: #bdc3c7;
+        }
+        
+        .contactdetail {
+            font-size: 1.75rem;
+        }
+        
+        .social-icon,
+        .menu {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px 0;
+            flex-wrap: wrap;
+        }
+        
+        .social-icon__item,
+        .menu__item {
+            list-style: none;
+        }
+        
+        .social-icon__link {
+            font-size: 2rem;
+            color: #fff;
+            margin: 0 10px;
+            display: inline-block;
+            transition: 0.5s;
+        }
+        
+        .social-icon__link:hover {
+            transform: translateY(-10px);
+        }
+        
+        .menu__link {
+            font-size: 1.2rem;
+            color: #fff;
+            margin: 0 10px;
+            display: inline-block;
+            transition: 0.5s;
+            text-decoration: none;
+            opacity: 0.75;
+            font-weight: 300;
+        }
+        
+        .menu__link:hover {
+            opacity: 1;
+        }
+        
+        .footer p {
+            color: #fff;
+            margin: 15px 0 10px 0;
+            font-size: 2rem;
+            font-weight: 500;
+        }
+    </style>
 
-        <div class="container-fluid bg-3 text-center" id="about">
-            <h3>Sample</h3><br>
-            <div class="row">
-                <div class="col-sm-3" data-aos="zoom-in-up" data-aos-duration="1000">
-                    <p>Sample</p>
-                    <img src="{% static 'images/log.png' %}" class="img-responsive" style="width:100%" alt="Image">
-                </div>
-                <div class="col-sm-3" data-aos="zoom-in-down" data-aos-duration="1000">
-                    <p>Sample</p>
-                    <img src="{% static 'images/log.png' %}" class="img-responsive" style="width:100%" alt="Image">
-                </div>
-                <div class="col-sm-3" data-aos="zoom-in-up" data-aos-duration="1000">
-                    <p>Sample</p>
-                    <img src="{% static 'images/log.png' %}" class="img-responsive" style="width:100%" alt="Image">
-                </div>
-                <div class="col-sm-3" data-aos="zoom-in-down" data-aos-duration="1000">
-                    <p>Sample</p>
-                    <img src="{% static 'images/log.png' %}" class="img-responsive" style="width:100%" alt="Image">
-                </div>
-            </div>
-        </div><br>
+    <style>
+        /*General */
+        
+        li {
+            list-style: none;
+        }
+        
+        h5.order a {
+            text-align: center;
+        }
+        /* Widget Contact Form
+        ================================================== */
+        
+        .contact-forms .btn {
+            border-radius: 0;
+            width: 100%;
+            text-align: left;
+            margin-bottom: 10px;
+        }
+        
+        .btn-primary {
+            color: #fff !important;
+            position: relative;
+            font-weight: bold;
+            text-transform: uppercase;
+            border: none !important;
+            -webkit-box-shadow: 0px -2px 0px 0px rgba(0, 0, 0, 0.2) inset;
+            box-shadow: 0px -2px 0px 0px rgba(0, 0, 0, 0.2) inset;
+        }
+        
+        h5.order a {
+            color: white;
+        }
+        
+        .contact-forms .btn {
+            border-radius: 0;
+            width: 100%;
+            text-align: center;
+            margin-bottom: 10px;
+            background: rgba(0, 79, 52);
+            padding: 17px;
+            border-radius: 4px;
+            color: white !important;
+        }
+        
+        .contact-forms .btn span {
+            float: left;
+        }
+        
+        .contact-forms .btn i {
+            float: right;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        
+        footer input[type="text "],
+        footer textarea,
+        .blacksidebar .contact-forms input[type="text "],
+        .blacksidebar .contact-forms textarea {
+            width: 100%;
+            margin-bottom: 13px;
+            padding: 8px 10px;
+            border-radius: 0;
+        }
+        
+        footer.style1 input[type="text "],
+        footer.style1 textarea,
+        .blacksidebar .contact-forms input[type="text "],
+        .blacksidebar .contact-forms textarea {
+            color: #bdc3c7;
+            background: #1d1e20;
+            border: #4b4c4e solid 1px;
+        }
+        
+        footer textarea {
+            height: 117px;
+        }
+        
+        header .contact-forms input[type="text "],
+        header .contact-forms textarea {
+            width: 100%;
+            margin-bottom: 20px;
+            color: #000408;
+            padding: 8px 10px;
+            background: #fff;
+            border: #c4c4c4 solid 1px;
+        }
+        
+        header .contact-forms input[type="submit "],
+        header .contact-forms button {
+            width: auto !important;
+        }
+        
+        header .contact-forms input[type="submit "] i,
+        header .contact-forms button i {
+            margin-left: 10px;
+        }
+        
+        footer textarea {
+            height: 117px;
+        }
+        /* Footer
+        ================================================== */
+        
+        footer hr {
+            border-top: rgba(255, 255, 255, 0.2) solid 1px;
+        }
+        
+        .footerwidgets {
+            /* padding: 40px 0; */
+        }
+        
+        footer.style1 .widget {
+            color: #bdc3c7;
+            border-top: none;
+        }
+        
+        footer .widget:before {
+            background: none;
+        }
+        
+        footer.style1 .widget a {
+            color: #bdc3c7;
+        }
+        
+        .widget-contact {
+            padding: 6px 45px 10px 45px;
+            background: rgba(226, 220, 224, 0.15);
+            border-radius: 2px;
+        }
+    </style>
 
-        <footer class="container-fluid text-center" id="foot">
-            <p>Developed at IIT Jodhpur</p>
-            <p>Sample</p>
-            <p>Sample</p>
-        </footer>
-        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-        <script>
-            AOS.init();
-        </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js "></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>
