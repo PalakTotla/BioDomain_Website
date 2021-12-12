@@ -7,11 +7,8 @@ Create Table Instruments(
     Institute varchar(255) NOT NULL,
     PRIMARY KEY (InstrumentID),
     FOREIGN KEY (Category) REFERENCES Categories(Category),
-    FOREIGN KEY (Institute) REFERENCES Institute(Institute)
-    
+    FOREIGN KEY (Institute) REFERENCES Institute(Institute)    
 );
-
-
 
 Create Table Institute(
     Institute varchar(255) NOT NULL,
