@@ -1,0 +1,913 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.theme.default.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
+
+
+</head>
+
+<body>
+    <div id="app">
+        <section>
+            <div class="row justify-content-center">
+                <div class="col-lg-7 container-fluid">
+                    <div class="text">
+                    <h2>About Us!</h2>
+                    <p>
+                        Bioequipzon is a platform for researchers to access the specific equipment they need for their R&D work that is either available in the particular city or institute of their interest. <br> <br>
+                        The main objective of this website is to provide support to the researchers by providing them with a list of instruments available in various institutes across the country.
+                    </p>
+                    <a href="https://www.wildsouls.gr/en/" target="_blank">
+                        <span>VIEW MORE!</span>
+                    </a>
+                    </div>
+                </div>
+                <div class="col-md-4 container-fluid">
+                    <div class='carousel'>
+                        <div class='carousel__item'>
+                            <div class='carousel__item-head'>
+                                <img src="{% static 'images\research.png' %}">
+                            </div>
+                            <div class='carousel__item-body'>
+                            <p class='title'>Categories</p>
+                            <p>12+</p>
+                            </div>
+                        </div>
+                        <div class='carousel__item'>
+                            <div class='carousel__item-head'>
+                                <i class="fa fa-university" aria-hidden="true"></i>
+                            </div>
+                            <div class='carousel__item-body'>
+                            <p class='title'>Instruments</p>
+                            <p>30+</p>
+                            </div>
+                        </div>
+                        <div class='carousel__item'>
+                            <div class='carousel__item-head'>
+                                <img src="{% static 'images\Equipments.jpg' %}" style= "border-radius: 50%">
+                            </div>
+                            <div class='carousel__item-body'>
+                            <p class='title'>Equipments Listed</p>
+                            <p>300+</p>
+                            </div>
+                        </div>
+                        <div class='carousel__item'>
+                            <div class='carousel__item-head'>
+                            🐟
+                            </div>
+                            <div class='carousel__item-body'>
+                            <p class='title'>fish</p>
+                            <p>Unicode: U+1F41F</p>
+                            </div>
+                        </div>
+                        <div class='carousel__item'>
+                            <div class='carousel__item-head'>
+                            🐠
+                            </div>
+                            <div class='carousel__item-body'>
+                            <p class='title'>tropical fish</p>
+                            <p>Unicode: U+1F420</p>
+                            </div>
+                        </div>
+                        <div class='carousel__item'>
+                            <div class='carousel__item-head'>
+                            🐡
+                            </div>
+                            <div class='carousel__item-body'>
+                            <p class='title'>blowfish</p>
+                            <p>Unicode: U+1F421</p>
+                            </div>
+                        </div>
+                        <div class='carousel__item'>
+                            <div class='carousel__item-head'>
+                            🦈
+                            </div>
+                            <div class='carousel__item-body'>
+                            <p class='title'>shark</p>
+                            <p>Unicode: U+1F988</p>
+                            </div>
+                        </div>                    
+                    </div>
+                </div>   
+            </div>        
+        </section>
+    </div>        
+
+
+    <style>
+        *, *::before, *::after {
+        box-sizing: border-box;
+        }
+
+        .carousel__item img{
+            width: 100%;
+            height: 100%;
+            
+        }
+
+        body {
+        font-family: "Work Sans", sans-serif;
+        font-weight: 400;
+        height: 100vh;
+        }
+
+        /* .wrapper {
+        background: linear-gradient(60deg, #420285, #08BDBD);
+        height: 80%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        } */
+
+        .carousel {
+        position: relative;
+        width: 100%;
+        max-width: 800px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin: 0 0 20% 0;
+        }
+
+        .carousel__item {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        width: 100%;
+        opacity: 0;
+        filter: drop-shadow(0 2px 2px #555);
+        will-change: transform, opacity;
+        -webkit-animation: carousel-animate-vertical 27s linear infinite;
+                animation: carousel-animate-vertical 27s linear infinite;
+        }
+
+        .carousel__item:nth-child(1) {
+        -webkit-animation-delay: calc(3s * -1);
+                animation-delay: calc(3s * -1);
+        }
+
+        .carousel__item:nth-child(2) {
+        -webkit-animation-delay: calc(3s * 0);
+                animation-delay: calc(3s * 0);
+        }
+
+        .carousel__item:nth-child(3) {
+        -webkit-animation-delay: calc(3s * 1);
+                animation-delay: calc(3s * 1);
+        }
+
+        .carousel__item:nth-child(4) {
+        -webkit-animation-delay: calc(3s * 2);
+                animation-delay: calc(3s * 2);
+        }
+
+        .carousel__item:nth-child(5) {
+        -webkit-animation-delay: calc(3s * 3);
+                animation-delay: calc(3s * 3);
+        }
+
+        .carousel__item:nth-child(6) {
+        -webkit-animation-delay: calc(3s * 4);
+                animation-delay: calc(3s * 4);
+        }
+
+        .carousel__item:last-child {
+        -webkit-animation-delay: calc(-3s * 2);
+                animation-delay: calc(-3s * 2);
+        }
+
+        .carousel__item-head {
+        border-radius: 50%;
+        background-color: #d7f7fc;
+        width: 90px;
+        height: 90px;
+        padding: 14px;
+        position: relative;
+        margin-right: -45px;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 50px;
+        }
+
+        .carousel__item-body {
+        width: 100%;
+        background-color: #fff;
+        border-radius: 8px;
+        padding: 16px 20px 16px 70px;
+        }
+
+        .title {
+        text-transform: uppercase;
+        font-size: 20px;
+        margin-top: 10px;
+        }
+
+        @-webkit-keyframes carousel-animate-vertical {
+        0% {
+            transform: translateY(100%) scale(0.5);
+            opacity: 0;
+            visibility: hidden;
+        }
+        3%, 11.1111111111% {
+            transform: translateY(100%) scale(0.7);
+            opacity: 0.4;
+            visibility: visible;
+        }
+        14.1111111111%, 22.2222222222% {
+            transform: translateY(0) scale(1);
+            opacity: 1;
+            visibility: visible;
+        }
+        25.2222222222%, 33.3333333333% {
+            transform: translateY(-100%) scale(0.7);
+            opacity: 0.4;
+            visibility: visible;
+        }
+        36.3333333333% {
+            transform: translateY(-100%) scale(0.5);
+            opacity: 0;
+            visibility: visible;
+        }
+        100% {
+            transform: translateY(-100%) scale(0.5);
+            opacity: 0;
+            visibility: hidden;
+        }
+        }
+
+        @keyframes carousel-animate-vertical {
+        0% {
+            transform: translateY(100%) scale(0.5);
+            opacity: 0;
+            visibility: hidden;
+        }
+        3%, 11.1111111111% {
+            transform: translateY(100%) scale(0.7);
+            opacity: 0.4;
+            visibility: visible;
+        }
+        14.1111111111%, 22.2222222222% {
+            transform: translateY(0) scale(1);
+            opacity: 1;
+            visibility: visible;
+        }
+        25.2222222222%, 33.3333333333% {
+            transform: translateY(-100%) scale(0.7);
+            opacity: 0.4;
+            visibility: visible;
+        }
+        36.3333333333% {
+            transform: translateY(-100%) scale(0.5);
+            opacity: 0;
+            visibility: visible;
+        }
+        100% {
+            transform: translateY(-100%) scale(0.5);
+            opacity: 0;
+            visibility: hidden;
+        }
+        }
+    </style>
+
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+        @-webkit-keyframes buttonHover {
+        100% {
+            transform: translateX(145%);
+        }
+        }
+        @keyframes buttonHover {
+        100% {
+            transform: translateX(145%);
+        }
+        }
+        @-webkit-keyframes moveCard {
+        95% {
+            left: 0;
+        }
+        100% {
+            left: 100%;
+        }
+        }
+        @keyframes moveCard {
+        95% {
+            left: 0;
+        }
+        100% {
+            left: 100%;
+        }
+        }
+        *,
+        *::before,
+        *::after {
+        box-sizing: border-box;
+        color: inherit;
+        list-style: none;
+        }
+
+        html,
+        body {
+        margin: 0;
+        padding: 0;
+        }
+
+        main {
+        display: block;
+        }
+
+        a {
+        text-decoration: none;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p {
+            padding: 4%;
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        html {
+        font-size: 10px;
+        font-family: "PT Sans", sans-serif;
+        }
+
+        body {
+        background-color: black;
+        }
+
+        @media (max-width: 768px) {
+        body {
+            overflow-y: auto;
+        }
+        }
+
+        #app {
+            background-image: url("https://wallpapercave.com/wp/wp5095618.jpg");
+            background-size: cover;
+            width: 96%;
+            max-width: 1920px;
+            min-width: 320px;
+            margin: 2%;
+            opacity: 0.5;
+        }     
+
+        section {
+        display: flex;
+        width: 80%;
+        padding: 100px 0;
+        margin: 0 auto;
+        }
+        @media (max-width: 768px) {
+        section {
+            flex-wrap: wrap;
+            width: 84%;
+        }
+        }
+        section .text {
+        flex-basis: 50%;
+        margin-right: 12%;
+        position: relative;
+        z-index: 2;
+        }
+        @media (max-width: 768px) {
+        section .text {
+            flex-basis: 100%;
+            margin-right: 0;
+            margin-bottom: 16%;
+        }
+        }
+        section .text h2 {
+        font-size: 6rem;
+        font-weight: 700;
+        letter-spacing: 2px;
+        line-height: 1;
+        margin-bottom: 20px;
+        }
+        @media (max-width: 940px) {
+        section .text h2 {
+            font-size: 5rem;
+        }
+        }
+        section .text p {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+        }
+        @media (max-width: 940px) {
+        section .text p {
+            font-size: 1.6rem;
+        }
+        }
+        section .text a {
+        display: inline-block;
+        background-color: #000;
+        padding: 16px 40px;
+        border-radius: 40px;
+        }
+        section .text a span {
+        display: block;
+        color: #fff;
+        font-size: 1.4rem;
+        font-weight: 700;
+        letter-spacing: 2px;
+        position: relative;
+        width: 100%;
+        transform: translateX(0);
+        -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+                user-select: none;
+        }
+        @media (max-width: 940px) {
+        section .text a span {
+            font-size: 1.3rem;
+        }
+        }
+        section .text a span::before {
+        content: "VIEW MORE!";
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transform: translateX(-145%);
+        }
+        section .text a:hover span {
+        -webkit-animation: buttonHover linear 2s infinite;
+                animation: buttonHover linear 2s infinite;
+        }
+        section .carousel {
+        flex-basis: 50%;
+        height: 500px;
+        position: relative;
+        }
+        @media (max-width: 768px) {
+        section .carousel {
+            flex-basis: 100%;
+            height: 400px;
+        }
+        }
+        section .carousel .card {
+        width: 100%;
+        max-width: 450px;
+        position: absolute;
+        top: 0;
+        left: 200%;
+        opacity: 0;
+        -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+                user-select: none;
+        transform-origin: bottom center;
+        transition: left 0.5s, opacity 0.5s, transform 0.5s;
+        }
+        @media (max-width: 768px) {
+        section .carousel .card {
+            max-width: 350px;
+        }
+        }
+        section .carousel .card.c1 {
+        transform: translateX(-50%) rotate(15deg);
+        }
+        section .carousel .card.c2 {
+        transform: translateX(-50%) rotate(-15deg);
+        transition-delay: 0.2s;
+        }
+        section .carousel .card.c3 {
+        transform: translateX(-50%) rotate(0deg);
+        transition-delay: 0.4s;
+        }
+        section .carousel .card.active {
+        left: 50%;
+        opacity: 1;
+        }
+        section .carousel .card.move {
+        left: 0;
+        opacity: 0;
+        transition-delay: 0s;
+        }
+        section .carousel .card.stage {
+        transform: translateX(-50%) rotate(0deg);
+        transition-delay: 0s;
+        }
+    </style>
+
+
+
+<div class="row">
+    <div class="col-xs-6 col-md-4">
+        <div class="content">
+            <div class="content-overlay"></div>
+            <img class="content-image" src="{% static 'images\Basic.png' %}" alt='Basic'>
+            <h3 class="name-text">Basic</h3>
+            <div class="content-details fadeIn-bottom">
+                <p class="content-text">The daily routine of a biologist involves the use of basic equipment in their biology experiments — such as microscopes, test tubes, beakers, and Bunsen burners — as well as high-tech scientific equipment and computers.</p>
+                <li>
+                    <a href="BasicEquipments">
+                        <h4>View more</h4>
+                    </a>
+                </li>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-xs-6 col-md-4">
+        <div class="content">
+            <div class="content-overlay"></div>
+            <img class="content-image" src="{% static 'images\Bioimaging.png' %}" alt='Bioimaging'>
+            <h3 class="name-text">Bioimaging</h3>
+            <div class="content-details fadeIn-bottom">
+                <p class="content-text">Bioimaging relates to methods that non-invasively visualize biological processes in real time. Bioimaging aims to interfere as little as possible with life processes. </p>
+                <li>
+                    <a href="BioimagingEquipments">
+                        <h4>View more</h4>
+                    </a>
+                </li>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-xs-6 col-md-4">
+        <div class="content">
+            <div class="content-overlay"></div>
+            <img class="content-image" src="{% static 'images\Centrifuge.png' %}" alt='Centrifuge'>
+            <h3 class="name-text">Centrifuge</h3>
+            <div class="content-details fadeIn-bottom">
+                <p class="content-text">A centrifuge is a device that uses centrifugal force to separate various components of a fluid. This is achieved by spinning the fluid at high speed within a container, thereby separating fluids of different densities or liquids from solids. </p>
+                <li>
+                    <a href="CentrifugeEquipments">
+                        <h4>View more</h4>
+                    </a>
+                </li>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-6 col-md-4">
+        <div class="content">
+            <div class="content-overlay"></div>
+            <img class="content-image" src="{% static 'images\CellCulture.png' %}" alt='Cell Culture'>
+            <h3 class="name-text">Cell Culture</h3>
+            <div class="content-details fadeIn-bottom">
+                <p class="content-text">Cell culture is the building block in life sciences research on all platforms; whether to produce recombinant proteins or virus particles or to make cell models. </p>
+                <li>
+                    <a href="CellCultureEquipments">
+                        <h4>View more</h4>
+                    </a>
+                </li>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-xs-6 col-md-4">
+        <div class="content">
+            <div class="content-overlay"></div>
+            <img class="content-image" src="{% static 'images\Electrophoresis.png' %}" alt='Electrophoresis' style="height: 110%;">
+            <h3 class="name-text">Electrophoresis</h3>
+            <div class="content-details fadeIn-bottom">
+                <p class="content-text">Electrophoresis is a laboratory technique used to separate DNA, RNA, or protein molecules based on their size and electrical charge. An electric current is used to move molecules.</p>
+                <li>
+                    <a href="ElectrophoresisEquipments">
+                        <h4>View more</h4>
+                    </a>
+                </li>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-xs-6 col-md-4">
+        <div class="content">
+            <div class="content-overlay"></div>
+            <img class="content-image" src="{% static 'images\Chromatography.png' %}" alt='Chromatography'>
+            <h3 class="name-text">Chromatography</h3>
+            <div class="content-details fadeIn-bottom">
+                <p class="content-text">Chromatography is a process for separating components of a mixture. To get the process started, the mixture is dissolved in a substance called the mobile phase, which carries it through a second substance called the stationary phase.</p>
+                <li>
+                    <a href="ChromatographyEquipments">
+                        <h4>View more</h4>
+                    </a>
+                </li>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-6 col-md-4">
+        <div class="content">
+            <div class="content-overlay"></div>
+            <img class="content-image" src="{% static 'images\Spectroscopy.png' %}" alt='Spectroscopy'>
+            <h3 class="name-text">Spectroscopy</h3>
+            <div class="content-details fadeIn-bottom">
+                <p class="content-text">Spectroscopy is the investigation and measurement of spectra produced by matter interacting with or emitting electromagnetic radiation. </p>
+                <li>
+                    <a href="SpectroscopyEquipments">
+                        <h4>View more</h4>
+                    </a>
+                </li>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-xs-6 col-md-4">
+        <div class="content">
+            <div class="content-overlay"></div>
+            <img class="content-image" src="{% static 'images\X-rayCrystallography.png' %}" alt='X-ray Crystallography'>
+            <h3 class="name-text">X-ray Crystallography</h3>
+            <div class="content-details fadeIn-bottom">
+                <p class="content-text">A diffractometer is a measuring instrument for analyzing the structure of a material from the scattering pattern produced when a beam of radiation or particles interacts with it. </p>
+                <li>
+                    <a href="XrayCrystallographyEquipments">
+                        <h4>View more</h4>
+                    </a>
+                </li>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-12 col-md-12">
+        <div class="content">
+            <div id="owl-example" class="owl-carousel">
+                <div class="owl_text">
+                    <div class="content-overlay"></div>
+                    <img class="content-image" src="{% static 'images\Sequencing.png' %}" alt='Sequencing'>
+                    <h3 class="name-text">Sequencing</h3>
+                    <div class="content-details fadeIn-bottom">
+                        <p class="content-text" style="padding: 0 10% 0 10%;">DNA sequencing is the process of determining the nucleic acid sequence the order of nucleotides in DNA. It includes any method or technology that is used to determine the order of the four bases.</p>
+                        <li>
+                            <a href="SequencingEquipments">
+                                <h4>View more</h4>
+                            </a>
+                        </li>
+                    </div>
+                </div>
+                <div class="owl_text">
+                    <div class="content-overlay"></div>
+                    <img class="content-image" src="{% static 'images\PCR.png' %}" alt='PCR'>
+                    <h3 class="name-text">PCR</h3>
+                    <div class="content-details fadeIn-bottom">
+                        <p class="content-text" style="padding: 0 10% 0 10%;">Polymerase chain reaction (PCR) is a common laboratory technique used to make many copies (millions or billions!) of a particular region of DNA. This DNA region can be anything the experimenter is interested in.</p>
+                        <li>
+                            <a href="PCREquipments">
+                                <h4>View more</h4>
+                            </a>
+                        </li>
+                    </div>
+                </div>
+                <div class="owl_text">
+                    <div class="content-overlay"></div>
+                    <img class="content-image" src="{% static 'images\Refrigerators.png' %}" alt='Refrigerators'>
+                    <h3 class="name-text">Refrigerators</h3>
+                    <div class="content-details fadeIn-bottom">
+                        <p class="content-text" style="padding: 0 10% 0 10%;">A refrigerator is a commercial and home appliance consisting of a thermally insulated compartment and a heat pump that transfers heat from its inside to its external environment so that its inside is cooled to a certain temperature.</p>
+                        <li>
+                            <a href="RefrigeratorEquipments">
+                                <h4>View more</h4>
+                            </a>
+                        </li>
+                    </div>
+                </div>
+                <div class="owl_text">
+                    <div class="content-overlay"></div>
+                    <img class="content-image" src="{% static 'images\Bioreactors.png' %}" alt='Bioreactors'>
+                    <h3 class="name-text">Bioreactors</h3>
+                    <div class="content-details fadeIn-bottom">
+                        <p class="content-text" style="padding: 0 10% 0 10%;">Bioreactor is defined as a vessel that carries out a biological reaction and is used to culture aerobic cells for conducting cellular or enzymatic immobilization.</p>
+                        <li>
+                            <a href="BioreactorEquipments">
+                                <h4>View more</h4>
+                            </a>
+                        </li>
+                    </div>
+                </div>
+                <div class="owl_text">
+                    <div class="content-overlay"></div>
+                    <img class="content-image" src="{% static 'images\Incubators.png' %}" alt='Incubators'>
+                    <h3 class="name-text">Incubators</h3>
+                    <div class="content-details fadeIn-bottom">
+                        <p class="content-text" style="padding: 0 10% 0 10%;">An incubator is a device used to grow and maintain microbiological cultures or cell cultures. The incubator maintains optimal temperature, humidity and other conditions such as the CO2 and oxygen content of the atmosphere inside.</p>
+                        <li>
+                            <a href="IncubatorEquipments">
+                                <h4>View more</h4>
+                            </a>
+                        </li>
+                    </div>
+                </div>
+                <div class="owl_text">
+                    <div class="content-overlay"></div>
+                    <img class="content-image" src="{% static 'images\Miscellaneous.png' %}" alt='Miscellaneous'>
+                    <h3 class="name-text">Miscellaneous</h3>
+                    <div class="content-details fadeIn-bottom">
+                        <p class="content-text" style="padding: 0 10% 0 10%;">There are a few instruments that do not fall into any specific grouping but are used to inform the pilot of data not related to specific systems.</p>
+                        <li>
+                            <a href="MiscellaneousEquipments">
+                                <h4>View more</h4>
+                            </a>
+                        </li>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .owl-nav {
+        position: absolute;
+        top: calc(50%);
+        width: 100%;
+    }
+    
+    .owl-nav div {
+        position: absolute;
+        top: 10%;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+    }
+    
+    .owl-prev {
+        left: 0;
+        display: flex;
+        background: white;
+    }
+    
+    .owl-prev:hover {
+        background: rgba(0, 0, 0, 0.5);
+        color: #fff;
+    }
+    
+    .owl-next {
+        right: 0;
+        display: flex;
+        background: white;
+    }
+    
+    .owl-next:hover {
+        background: rgba(0, 0, 0, 0.5);
+        color: #fff;
+    }
+    
+    .owl-prev i,
+    .owl-next i {
+        margin: auto;
+    }
+    
+    @import url(https://fonts.googleapis.com/css?family=Raleway);
+    *,
+    *:before,
+    *:after {
+        margin: 0;
+        padding: 0;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    
+    .name-text {
+        position: absolute;
+        bottom: 0%;
+        text-align: center;
+        font-size: 3.75rem;
+        font-weight: 600;
+        color: rgba(255, 255, 255, 0.8);
+        background-color: rgba(0, 0, 0, 0.6);
+        text-transform: uppercase;
+    }
+    
+    .content:hover .name-text {
+        opacity: 0;
+    }
+    
+    .content-details h4 {
+        text-align: right;
+        text-decoration: none;
+        font-size: 2rem;
+        color: white;
+    }
+    
+    .row {
+        content: '';
+        clear: both;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 5%;
+    }
+    
+    .content {
+        position: relative;
+        width: 90%;
+        max-width: 400px;
+        margin: 2%;
+        overflow: hidden;
+    }
+    
+    .content .content-overlay {
+        background: rgba(0, 0, 0, 0.8);
+        position: absolute;
+        height: 99%;
+        width: 100%;
+        left: 0;
+        top: 40%;
+        bottom: 0;
+        right: 0;
+        opacity: 0;
+        -webkit-transition: all 0.4s ease-in-out 0s;
+        -moz-transition: all 0.4s ease-in-out 0s;
+        transition: all 0.4s ease-in-out 0s;
+    }
+    
+    .content:hover .content-overlay {
+        opacity: 1;
+    }
+    
+    .content-image {
+        width: 100%;
+    }
+    
+    .content-details {
+        position: absolute;
+        text-align: center;
+        padding-left: 1em;
+        padding-right: 1em;
+        width: 100%;
+        top: 50%;
+        left: 50%;
+        bottom: 0%;
+        opacity: 0;
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        transform: translate(-50%, 0%);
+        -webkit-transition: all 0.3s ease-in-out 0s;
+        -moz-transition: all 0.3s ease-in-out 0s;
+        transition: all 0.3s ease-in-out 0s;
+    }
+    
+    .content:hover .content-details {
+        top: 50%;
+        left: 50%;
+        opacity: 1;
+    }
+    
+    .content-details p {
+        position: relative;
+        color: #fff;
+        font-size: 1.5rem;
+    }
+    
+    .fadeIn-bottom {
+        top: 80%;
+    }
+</style>
+
+
+<script>
+    $(document).ready(function() {
+        $("#owl-example").owlCarousel({
+            navigation: true, // Show next and prev buttons
+            slideSpeed: 300,
+            margin: 10,
+            paginationSpeed: 400,
+            autoplay: false,
+            items: 1,
+            itemsDesktop: false,
+            itemsDesktopSmall: false,
+            itemsTablet: false,
+            itemsMobile: false,
+            loop: true,
+            nav: true,
+            navText: ["<i class='fa fa-angle-left fa-2x' aria-hidden='true'></i>", "<i class='fa fa-angle-right fa-2x' aria-hidden='true'></i>"]
+        });
+    });
+</script>
+<!-- categories -->
+    
+</body>
+
+</html>
